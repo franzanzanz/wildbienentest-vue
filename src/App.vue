@@ -17,7 +17,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./assets/sass/_font-imports";
 
 #app {
   font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;

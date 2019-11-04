@@ -1,12 +1,26 @@
 <template>
-	<div class="alert-success">
-		{{ msg }}
+	<div class="container-fluid">
+		<div class="alert-danger">
+			Imprint Screen
+		</div>
+		<button
+			class="btn btn-primary mt-4 mr-4"
+			@click="$emit('showSurvey')"
+		>
+			go to survey
+		</button>
+		<button
+			class="btn btn-primary mt-4"
+			@click="$emit('showStart')"
+		>
+			back to start
+		</button>
 	</div>
 </template>
 
 <script>
 export default {
-	name: 'HelloWorld',
+	name: 'Imprint',
 	props: {
 		msg: {
 			type: String,

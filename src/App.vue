@@ -1,17 +1,59 @@
 <template>
 	<div id="app">
-		<img alt="Vue logo" src="./assets/logo.png">
-		<HelloWorld msg="Welcome to Your Vue.js App" />
+		<Navi />
+		<Start
+			v-if="state === 'start'"
+			@showImprint="showImprint"
+			@showSurvey="showSurvey"
+		/>
+		<Survey
+			v-if="state === 'survey'"
+			@showImprint="showImprint"
+			@showStart="showStart"
+		/>
+		<Imprint
+			v-if="state === 'imprint'"
+			@showStart="showStart"
+			@showSurvey="showSurvey"
+		/>
+		<Footer />
 	</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import Navi from './components/Navi.vue';
+import Start from './components/Start.vue';
+import Survey from './components/Survey.vue';
+import Imprint from './components/Imprint.vue';
+import Footer from './components/Footer.vue';
 
 export default {
 	name: 'WildbienenTest',
 	components: {
-		HelloWorld
+		Navi,
+		Start,
+		Survey,
+		Imprint,
+		Footer
+	},
+
+	data() {
+		return {
+			state: 'start'
+		};
+	},
+
+	methods: {
+		showImprint() {
+			this.state = 'imprint';
+		},
+		showSurvey() {
+			this.state = 'survey';
+		},
+		showStart() {
+			this.state = 'start';
+		}
+
 	}
 };
 </script>
@@ -22,8 +64,6 @@ export default {
   font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  // margin-top: 60px;
 }
 </style>

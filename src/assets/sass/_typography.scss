@@ -4,7 +4,12 @@ html, body {
 
 h1 {
 	font-family: 'Kalam', Arial, Helvetica, sans-serif;
-	font-size: 3rem;
+	font-size: 2rem;
 	text-align: center;
 }
 
+@media (min-width: 768px) {
+	h1 {
+		font-size: 3rem;
+	}
+}

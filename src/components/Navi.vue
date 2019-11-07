@@ -11,7 +11,7 @@
 			<span />
 		</div>
 		<div
-			class="navipanel "
+			class="navipanel"
 			:class="{'open': naviOpen}"
 		>
 			<div class="navilinks">
@@ -37,7 +37,12 @@
 						<a href="">Test starten</a>
 					</li>
 					<li class="multiline-navilink">
-						<a href="">Impressum/<br>Datenschutz</a>
+						<a
+							href="/"
+							@click="showImprint"
+						>
+							Impressum/<br>Datenschutz
+						</a>
 					</li>
 				</ul>
 			</div>
@@ -64,6 +69,12 @@ export default {
 	methods: {
 		togglNav() {
 			this.naviOpen = !this.naviOpen;
+		},
+
+		showImprint(e) {
+			console.log(e);
+			e.preventDefault();
+			this.$emit('showImprint');
 		}
 	}
 };
@@ -154,16 +165,19 @@ export default {
 	.navipanel {
 		position: fixed;
 		top: 0;
-		right: 0;
+		// right: 0;
+		right: -30rem;
 		width: 27rem;
 		height: 100vh;
 		background-color: $bt-yellow-ultralight;
 		visibility: hidden;
 		opacity: 0;
-		clip-path: polygon(5% 0, 100% 0, 100% 100%, 0 100%);
-		transition: visibility $transitions-basic, opacity $transitions-basic linear;
+		clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+		transition: visibility $transitions-basic, right $transitions-basic, opacity $transitions-basic linear;
+		// transition: right $transitions-basic linear;
 		z-index: 1000;
 		&.open {
+			right: 0;
 			opacity: .9;
 			visibility: visible;
 		}
@@ -178,7 +192,7 @@ export default {
 	ul {
 		list-style-type: none;
 		font-size: 2rem;
-		font-weight: 400;
+		font-weight: 200;
 		line-height: 4rem;
 		text-align: right;
 		ul {

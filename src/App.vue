@@ -1,6 +1,9 @@
 <template>
 	<div id="app">
-		<Navi />
+		<Navi
+			@showImprint="showImprint"
+			@showSurvey="showSurvey"
+		/>
 		<Start
 			v-if="state === 'start'"
 			@showImprint="showImprint"
@@ -45,6 +48,7 @@ export default {
 
 	methods: {
 		showImprint() {
+			console.log('imprint');
 			this.state = 'imprint';
 		},
 		showSurvey() {

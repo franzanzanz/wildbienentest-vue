@@ -1,42 +1,21 @@
 <template>
 	<div id="app">
-		<Navi
-			@showImprint="showImprint"
-			@showSurvey="showSurvey"
-		/>
-		<Start
-			v-if="state === 'start'"
-			@showImprint="showImprint"
-			@showSurvey="showSurvey"
-		/>
-		<Survey
-			v-if="state === 'survey'"
-			@showImprint="showImprint"
-			@showStart="showStart"
-		/>
-		<Imprint
-			v-if="state === 'imprint'"
-			@showStart="showStart"
-			@showSurvey="showSurvey"
-		/>
-		<Footer />
+		<div id="nav">
+			<Navi />
+			<router-view />
+			<Footer />
+		</div>
 	</div>
 </template>
 
 <script>
 import Navi from './components/Navi.vue';
-import Start from './components/Start.vue';
-import Survey from './components/Survey.vue';
-import Imprint from './components/Imprint.vue';
 import Footer from './components/Footer.vue';
 
 export default {
 	name: 'WildbienenTest',
 	components: {
 		Navi,
-		Start,
-		Survey,
-		Imprint,
 		Footer
 	},
 

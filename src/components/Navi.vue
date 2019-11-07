@@ -17,7 +17,9 @@
 			<div class="navilinks">
 				<ul>
 					<li>
-						<a href="">Start</a>
+						<router-link to="/">
+							Home
+						</router-link>
 					</li>
 					<ul class="mb-4">
 						<li>
@@ -34,15 +36,14 @@
 						</li>
 					</ul>
 					<li>
-						<a href="">Test starten</a>
+						<router-link to="/survey">
+							Test starten
+						</router-link>
 					</li>
 					<li class="multiline-navilink">
-						<a
-							href="/"
-							@click="showImprint"
-						>
-							Impressum/<br>Datenschutz
-						</a>
+						<router-link to="/imprint">
+							Datenschutz/<br>Impressum
+						</router-link>
 					</li>
 				</ul>
 			</div>

@@ -44,7 +44,7 @@
 
 <script>
 export default {
-	name: 'Start',
+	name: 'Home',
 	props: {
 		msg: {
 			type: String,

@@ -17,7 +17,10 @@
 			<div class="navilinks">
 				<ul>
 					<li>
-						<router-link to="/">
+						<router-link
+							to="/"
+							@click.native="togglNav"
+						>
 							Home
 						</router-link>
 					</li>
@@ -36,12 +39,18 @@
 						</li>
 					</ul>
 					<li>
-						<router-link to="/survey">
+						<router-link
+							to="/survey"
+							@click.native="togglNav"
+						>
 							Test starten
 						</router-link>
 					</li>
 					<li class="multiline-navilink">
-						<router-link to="/imprint">
+						<router-link
+							to="/imprint"
+							@click.native="togglNav"
+						>
 							Datenschutz/<br>Impressum
 						</router-link>
 					</li>
@@ -70,12 +79,6 @@ export default {
 	methods: {
 		togglNav() {
 			this.naviOpen = !this.naviOpen;
-		},
-
-		showImprint(e) {
-			console.log(e);
-			e.preventDefault();
-			this.$emit('showImprint');
 		}
 	}
 };

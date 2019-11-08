@@ -2,7 +2,7 @@
 	<div class="container-fluid px-0">
 		<div class="stage container-fluid">
 			<div class="row justify-content-center">
-				<div class="col col-lg-2 text-center">
+				<div class="col-12 text-sm-center pl-5 pl-sm-0">
 					<img class="logo-stage" src="../../src/assets/media/logo-wildbienentest.svg" alt="">
 				</div>
 			</div>
@@ -19,7 +19,7 @@
 				</div>
 			</div>
 			<div class="row justify-content-center mb-5">
-				<a class="textlink" href="#">mehr lesen</a>
+				<a class="textlink-kalam" href="#">mehr lesen</a>
 			</div>
 			<div class="row justify-content-center">
 				<button

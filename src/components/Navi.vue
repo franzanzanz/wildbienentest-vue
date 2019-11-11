@@ -24,7 +24,7 @@
 							Home
 						</router-link>
 					</li>
-					<ul class="mb-4">
+					<ul class="mb-2 mb-sm-4">
 						<li>
 							<a href="">Intro</a>
 						</li>
@@ -94,8 +94,8 @@ export default {
 		width: 40px;
 		height: 40px;
 		position: fixed;
-		top: 4rem;
-		right: 4rem;
+		top: 2rem;
+		right: 2rem;
 		-webkit-transform: rotate(0deg);
 		-moz-transform: rotate(0deg);
 		-o-transform: rotate(0deg);
@@ -189,20 +189,20 @@ export default {
 
 	.navilinks {
 		position: relative;
-		top: 10rem;
-		right: 7rem;
+		top: 5rem;
+		right: 4.5rem;
 	}
 
 	ul {
 		list-style-type: none;
 		font-size: 2rem;
 		font-weight: 200;
-		line-height: 4rem;
+		line-height: 3rem;
 		text-align: right;
 		ul {
 			margin-left: -1.5rem;
 			font-size: 1.5rem;
-			line-height: 3rem;
+			line-height: 2.5rem;
 		}
 		a {
 			color: black;
@@ -219,6 +219,25 @@ export default {
 		.multiline-navilink {
 			margin-top: 1rem;
 			line-height: 2.5rem;
+		}
+	}
+
+	@media (min-width: 768px) {
+		#beenav-hamburger {
+			top: 4rem;
+			right: 4rem;
+		}
+
+		.navilinks {
+			top: 10rem;
+			right: 7rem;
+		}
+
+		ul {
+			line-height: 4rem;
+			ul {
+				line-height: 3rem;
+			}
 		}
 	}
 </style>

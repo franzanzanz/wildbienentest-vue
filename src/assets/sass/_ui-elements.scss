@@ -1,7 +1,7 @@
 .beebutton {
 	font-family: 'Kalam', Arial, sans-serif;
 	border: none;
-	border-radius: 30px;
+	border-radius: 35px;
 	padding: .5rem 2rem;
 	&:hover {
 		background-color: $bt-red-darker;
@@ -10,8 +10,8 @@
 
 .beebutton-large {
 	background-color: $bt-red;
-	font-size: 1.2rem;
-	padding: .75rem 4rem;
+	font-size: 1.5rem;
+	padding: 1rem 4rem;
 }
 
 .textlink-kalam {

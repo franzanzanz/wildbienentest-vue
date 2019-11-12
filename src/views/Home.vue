@@ -30,6 +30,7 @@
 				</button>
 			</div>
 		</div>
+
 		<div id="home-intro" class="container-fluid my-5">
 			<div class="row justify-content-center">
 				<div class="col col-lg-6">
@@ -108,16 +109,210 @@
 				</div>
 			</div>
 		</div>
-		<div class="container-fluid my-5">
-			twitter
-		</div>
 
-		<div id="home-tipps" class="container-fluid my-5">
-			Pflanztipps
+		<div id="home-tipps" class="container-fluid my-5 pflanztipps py-5">
+			<div class="row justify-content-center">
+				<div class="col col-lg-6">
+					<h1 class="mb-4">
+						Pflanztipps
+					</h1>
+				</div>
+			</div>
+
+			<div class="row justify-content-center">
+				<div class="col col-sm-8">
+					<p class="mb-5">
+						In der Übersicht unten finden Sie eine kleine Auswahl an Pflanzen, die bei Wildbienen besonders beliebt sind. Wenn Sie sich noch intensiver mit dem Thema befassen wollen, können wir Ihnen <a href="https://www.bmel.de/SharedDocs/Downloads/Broschueren/Bienenlexikon.pdf?__blob=publicationFile" target="_blank" rel="noopener">dieses Infodokument</a> des Bundesministeriums für Ernährung und Landwirtschaft wärmstens empfehlen.
+					</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 col-lg-7">
+					<div class="row px-5 px-lg-0 pl-lg-5 mr-lg-4">
+						<div class="col-12 py-2 mb-3 text-center pflanzenart-head">
+							Zierpflanzen
+						</div>
+						<div class="col-12 col-md-4 pl-0 text-center">
+							<div class="py-2 season-head">
+								Frühjahr
+							</div>
+							<div class="my-3 pflanzen-card">
+								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Schlehdorn" target="_blank" rel="noopener">
+									<div class="mx-auto pflanzenbild schlehe" />
+									Schlehe
+								</a>
+							</div>
+							<div class="my-3 pflanzen-card">
+								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Fr%C3%BChlings-Krokus" target="_blank" rel="noopener">
+									<div class="mx-auto pflanzenbild krokus" />
+									Frühlings-Krokus
+								</a>
+							</div>
+							<div class="my-3 pflanzen-card">
+								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Lungenkr%C3%A4uter" target="_blank" rel="noopener">
+									<div class="mx-auto pflanzenbild lungenkraut" />
+									Lungenkraut
+								</a>
+							</div>
+							<div class="my-3 pflanzen-card">
+								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Heckenkirschen" target="_blank" rel="noopener">
+									<div class="mx-auto pflanzenbild heckenkirsche" />
+									Heckenkirsche
+								</a>
+							</div>
+							<div class="my-3 pflanzen-card">
+								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Winterling" target="_blank" rel="noopener">
+									<div class="mx-auto pflanzenbild winterling" />
+									Winterling
+								</a>
+							</div>
+							<div class="my-3 pflanzen-card">
+								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Traubenhyazinthen" target="_blank" rel="noopener">
+									<div class="mx-auto pflanzenbild traubenhyazinthe" />
+									Traubenhyazinthe
+								</a>
+							</div>
+						</div>
+						<div class="col-12 col-md-4 text-center">
+							<div class="py-2 season-head">
+								Sommer
+							</div>
+							<div class="my-3 pflanzen-card">
+								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Schlehdorn" target="_blank" rel="noopener">
+									<div class="mx-auto pflanzenbild schlehe" />
+									Schlehe
+								</a>
+							</div>
+							<div class="my-3 pflanzen-card">
+								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Fr%C3%BChlings-Krokus" target="_blank" rel="noopener">
+									<div class="mx-auto pflanzenbild krokus" />
+									Frühlings-Krokus
+								</a>
+							</div>
+							<div class="my-3 pflanzen-card">
+								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Lungenkr%C3%A4uter" target="_blank" rel="noopener">
+									<div class="mx-auto pflanzenbild lungenkraut" />
+									Lungenkraut
+								</a>
+							</div>
+							<div class="my-3 pflanzen-card">
+								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Heckenkirschen" target="_blank" rel="noopener">
+									<div class="mx-auto pflanzenbild heckenkirsche" />
+									Heckenkirsche
+								</a>
+							</div>
+							<div class="my-3 pflanzen-card">
+								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Winterling" target="_blank" rel="noopener">
+									<div class="mx-auto pflanzenbild winterling" />
+									Winterling
+								</a>
+							</div>
+							<div class="my-3 pflanzen-card">
+								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Traubenhyazinthen" target="_blank" rel="noopener">
+									<div class="mx-auto pflanzenbild traubenhyazinthe" />
+									Traubenhyazinthe
+								</a>
+							</div>
+						</div>
+						<div class="col-12 col-md-4 pr-0 text-center">
+							<div class="py-2 season-head">
+								Herbst
+							</div>
+							<div class="my-3 pflanzen-card">
+								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Schlehdorn" target="_blank" rel="noopener">
+									<div class="mx-auto pflanzenbild schlehe" />
+									Schlehe
+								</a>
+							</div>
+							<div class="my-3 pflanzen-card">
+								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Fr%C3%BChlings-Krokus" target="_blank" rel="noopener">
+									<div class="mx-auto pflanzenbild krokus" />
+									Frühlings-Krokus
+								</a>
+							</div>
+							<div class="my-3 pflanzen-card">
+								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Lungenkr%C3%A4uter" target="_blank" rel="noopener">
+									<div class="mx-auto pflanzenbild lungenkraut" />
+									Lungenkraut
+								</a>
+							</div>
+							<div class="my-3 pflanzen-card">
+								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Heckenkirschen" target="_blank" rel="noopener">
+									<div class="mx-auto pflanzenbild heckenkirsche" />
+									Heckenkirsche
+								</a>
+							</div>
+							<div class="my-3 pflanzen-card">
+								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Winterling" target="_blank" rel="noopener">
+									<div class="mx-auto pflanzenbild winterling" />
+									Winterling
+								</a>
+							</div>
+							<div class="my-3 pflanzen-card">
+								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Traubenhyazinthen" target="_blank" rel="noopener">
+									<div class="mx-auto pflanzenbild traubenhyazinthe" />
+									Traubenhyazinthe
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-lg-5">
+					<div class="row px-5 px-lg-0 pr-lg-5">
+						<div class="col-12 py-2 mb-3 text-center pflanzenart-head">
+							Nutzpflanzen
+						</div>
+						<div class="col-12 col-md-6 pl-0 text-center">
+							<div class="py-2 season-head">
+								Früchte
+							</div>
+							<div class="my-3 pflanzen-card">
+								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Winterling" target="_blank" rel="noopener">
+									<div class="mx-auto pflanzenbild winterling" />
+									Winterling
+								</a>
+							</div>
+							<div class="my-3 pflanzen-card">
+								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Traubenhyazinthen" target="_blank" rel="noopener">
+									<div class="mx-auto pflanzenbild traubenhyazinthe" />
+									Traubenhyazinthe
+								</a>
+							</div>
+						</div>
+						<div class="col-12 col-md-6 pr-0 text-center">
+							<div class="py-2 season-head">
+								Küchenkräuter
+							</div>
+							<div class="my-3 pflanzen-card">
+								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Winterling" target="_blank" rel="noopener">
+									<div class="mx-auto pflanzenbild winterling" />
+									Winterling
+								</a>
+							</div>
+							<div class="my-3 pflanzen-card">
+								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Traubenhyazinthen" target="_blank" rel="noopener">
+									<div class="mx-auto pflanzenbild traubenhyazinthe" />
+									Traubenhyazinthe
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<div id="home-infos" class="container-fluid my-5">
-			Projektinfos
+			<div class="row justify-content-center px-5">
+				<div class="col col-lg-8">
+					Projektinfos
+				</div>
+				<div class="col col-lg-3 twitter-timeline">
+					<twitter>
+						<a class="twitter-timeline" data-height="700" data-dnt="true" data-chrome="transparent" href="https://twitter.com/wildbienentest?ref_src=twsrc%5Etfw">Tweets by wildbienentest</a>
+					</twitter>
+				</div>
+			</div>
 		</div>
 
 		<div id="home-team" class="container-fluid my-5">
@@ -182,6 +377,67 @@ export default {
 	p {
 		font-weight: 600;
 		line-height: 1.4rem;
+	}
+}
+
+.twitter-timeline {
+	background: rgb(254,238,231);
+	background: linear-gradient(32deg, rgba(254,238,231,1) 0%, rgba(235,254,255,1) 100%);
+	border-radius: 15px;
+	border: 4px dotted $bt-red-ultralight;
+}
+
+.pflanztipps {
+	background: url("../../src/assets/media/bgnd_floral-illus.jpg") no-repeat center;
+	background-size: cover;
+
+	.pflanzenart-head {
+		border: 2px solid $bt-red;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+	.season-head {
+		border: 2px solid $bt-green;
+		font-weight: 600;
+		border-top-left-radius: 15px;
+		border-bottom-right-radius: 15px;
+	}
+
+	.pflanzen-card {
+		.pflanzenbild {
+			width: 6rem;
+			height: 6rem;
+			border-radius: 100%;
+			border: 2px solid $bt-green;
+		}
+		.pflanzenlink {
+			font-weight: 600;
+			color: $bt-green;
+		}
+		.schlehe {
+			background: url("https://upload.wikimedia.org/wikipedia/commons/7/7a/Schlehenbl%C3%BCte_IV.jpeg") no-repeat center;
+			background-size: 200%;
+		}
+		.krokus {
+			background: url("https://upload.wikimedia.org/wikipedia/commons/e/e2/CrocusVernus.jpg") no-repeat center;
+			background-size: 200%;
+		}
+		.lungenkraut {
+			background: url("https://upload.wikimedia.org/wikipedia/commons/4/44/Pulmonaria_affinis.jpg") no-repeat center;
+			background-size: 100%;
+		}
+		.heckenkirsche {
+			background: url("https://upload.wikimedia.org/wikipedia/commons/0/0e/Wohlriechende_Heckenkirsche%2C_Passau.jpg") no-repeat center;
+			background-size: 300%;
+		}
+		.winterling {
+			background: url("https://upload.wikimedia.org/wikipedia/commons/b/b4/Winterling-Bluete-70.jpg") no-repeat center;
+			background-size: 150%;
+		}
+		.traubenhyazinthe {
+			background: url("https://upload.wikimedia.org/wikipedia/commons/1/1a/Muscari_armeniacum_4.jpg") no-repeat center;
+			background-size: 200%;
+		}
 	}
 }
 

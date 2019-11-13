@@ -11,6 +11,7 @@
 <script>
 import Navi from './components/Navi.vue';
 import Footer from './components/Footer.vue';
+import { methodMixin } from './methodMixin';
 
 export default {
 	name: 'WildbienenTest',
@@ -19,12 +20,18 @@ export default {
 		Footer
 	},
 
+	mixins: [methodMixin],
+
 	data() {
 		return {
 			twitterPosts: [],
 			twitterErrors: [],
 			state: 'start'
 		};
+	},
+
+	mounted() {
+		setTimeout(() => this.scrollFix(this.$route.hash), 1);
 	},
 
 	methods: {
@@ -38,7 +45,6 @@ export default {
 		showStart() {
 			this.state = 'start';
 		}
-
 	}
 };
 </script>

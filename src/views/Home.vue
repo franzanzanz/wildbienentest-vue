@@ -19,7 +19,13 @@
 				</div>
 			</div>
 			<div class="row justify-content-center mb-5">
-				<a class="textlink-kalam" href="#">mehr lesen</a>
+				<router-link
+					class="textlink-kalam"
+					to="#home-intro"
+					@click.native="scrollFix('#home-intro')"
+				>
+					mehr lesen
+				</router-link>
 			</div>
 			<div class="row justify-content-center">
 				<button
@@ -48,7 +54,7 @@
 				</div>
 			</div>
 
-			<div id="facts-stripe" class="row facts-stripe py-5 justify-content-center justify-content-sm-between mb-5">
+			<div id="facts-stripe" class="row facts-stripe px-5 py-5 justify-content-center justify-content-sm-between mb-5">
 				<div class="col-12 col-md-6 col-xl-2 fact-card text-center py-4 px-3 mb-5 mb-xl-0">
 					<h1>
 						550
@@ -322,18 +328,16 @@
 </template>
 
 <script>
+import { methodMixin } from '../methodMixin';
 
 export default {
 	name: 'Home',
+	mixins: [methodMixin],
 	props: {
 		msg: {
 			type: String,
 			default: ''
 		}
-	},
-
-	created() {
-
 	}
 
 };
@@ -360,25 +364,25 @@ export default {
 	// height: 20rem;
 	background: url("../../src/assets/media/zoe-gayah-jonker-q5c84C6h_Y8-unsplash.jpg") no-repeat fixed center;
 	background-size: cover;
-	padding-left: 5rem;
-	padding-right: 5rem;
-}
 
-.fact-card {
+	.fact-card {
 		border: 4px dotted $bt-red-025alpha;
 		background-color: $bt-red-01alpha;
 		border-radius: 1rem;
-	h1 {
-		font-size: 5rem;
-		font-weight: 700;
-		color: $bt-red;
-		margin-bottom: -1rem;
-	}
-	p {
-		font-weight: 600;
-		line-height: 1.4rem;
+		h1 {
+			font-size: 5rem;
+			font-weight: 700;
+			color: $bt-red;
+			margin-bottom: -1rem;
+		}
+		p {
+			font-weight: 600;
+			line-height: 1.4rem;
+		}
 	}
 }
+
+
 
 .twitter-timeline {
 	background: rgb(254,238,231);
@@ -448,10 +452,10 @@ export default {
 		margin-bottom: 5rem;
 	}
 
-	.fact-card {
-		min-width: 20vw;
-		max-width: 38vw;
-	}
+.fact-card {
+	min-width: 20vw;
+	max-width: 38vw;
+}
 
 }
 

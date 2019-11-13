@@ -18,24 +18,44 @@
 				<ul>
 					<li>
 						<router-link
-							to="/"
-							@click.native="togglNav"
+							to="/#home-top"
+							@click.native="anchorlinkNavi('#home-top')"
 						>
 							Home
 						</router-link>
 					</li>
 					<ul class="mb-2 mb-sm-4">
 						<li>
-							<a href="">Intro</a>
+							<router-link
+								to="/#home-intro"
+								@click.native="anchorlinkNavi('#home-intro')"
+							>
+								Intro
+							</router-link>
 						</li>
 						<li>
-							<a href="">Pflanztipps</a>
+							<router-link
+								to="/#home-tipps"
+								@click.native="anchorlinkNavi('#home-tipps')"
+							>
+								Pflanztipps
+							</router-link>
 						</li>
 						<li>
-							<a href="">Über das Projekt</a>
+							<router-link
+								to="/#home-about"
+								@click.native="anchorlinkNavi('#home-about')"
+							>
+								Über das Projekt
+							</router-link>
 						</li>
 						<li>
-							<a href="">Team</a>
+							<router-link
+								to="/#home-team"
+								@click.native="anchorlinkNavi('#home-team')"
+							>
+								Projekt-Team
+							</router-link>
 						</li>
 					</ul>
 					<li>
@@ -61,8 +81,11 @@
 </template>
 
 <script>
+import { methodMixin } from '../methodMixin';
+
 export default {
 	name: 'Navi',
+	mixins: [methodMixin],
 	props: {
 		msg: {
 			type: String,
@@ -77,6 +100,11 @@ export default {
 	},
 
 	methods: {
+		anchorlinkNavi(hashbang) {
+			this.scrollFix(hashbang);
+			this.togglNav();
+		},
+
 		togglNav() {
 			this.naviOpen = !this.naviOpen;
 		}

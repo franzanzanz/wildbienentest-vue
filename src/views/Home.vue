@@ -1,6 +1,6 @@
 <template>
 	<div class="container-fluid px-0">
-		<div class="stage container-fluid">
+		<div id="home-top" class="stage container-fluid">
 			<div class="row justify-content-center">
 				<div class="col-12 text-sm-center pl-4 px-sm-0">
 					<img class="logo-stage" src="../../src/assets/media/logo-wildbienentest.svg" alt="">
@@ -136,179 +136,79 @@
 			<div class="row">
 				<div class="col-12 col-lg-7">
 					<div class="row px-5 px-lg-0 pl-lg-5 mr-lg-4">
-						<div class="col-12 py-2 mb-3 text-center pflanzenart-head">
+						<div class="col-12 py-2 mb-3 text-center pflanzen-head">
 							Zierpflanzen
 						</div>
 						<div class="col-12 col-md-4 pl-0 text-center">
-							<div class="py-2 season-head">
+							<div class="py-2 pflanzen-subhead">
 								Frühjahr
 							</div>
-							<div class="my-3 pflanzen-card">
-								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Schlehdorn" target="_blank" rel="noopener">
-									<div class="mx-auto pflanzenbild schlehe" />
-									Schlehe
-								</a>
-							</div>
-							<div class="my-3 pflanzen-card">
-								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Fr%C3%BChlings-Krokus" target="_blank" rel="noopener">
-									<div class="mx-auto pflanzenbild krokus" />
-									Frühlings-Krokus
-								</a>
-							</div>
-							<div class="my-3 pflanzen-card">
-								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Lungenkr%C3%A4uter" target="_blank" rel="noopener">
-									<div class="mx-auto pflanzenbild lungenkraut" />
-									Lungenkraut
-								</a>
-							</div>
-							<div class="my-3 pflanzen-card">
-								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Heckenkirschen" target="_blank" rel="noopener">
-									<div class="mx-auto pflanzenbild heckenkirsche" />
-									Heckenkirsche
-								</a>
-							</div>
-							<div class="my-3 pflanzen-card">
-								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Winterling" target="_blank" rel="noopener">
-									<div class="mx-auto pflanzenbild winterling" />
-									Winterling
-								</a>
-							</div>
-							<div class="my-3 pflanzen-card">
-								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Traubenhyazinthen" target="_blank" rel="noopener">
-									<div class="mx-auto pflanzenbild traubenhyazinthe" />
-									Traubenhyazinthe
-								</a>
-							</div>
+							<PlantCard plantname="Schlehe" url="https://de.wikipedia.org/wiki/Schlehdorn" />
+							<PlantCard plantname="Frühlingskrokus" url="https://de.wikipedia.org/wiki/Fr%C3%BChlings-Krokus" />
+							<PlantCard plantname="Lungenkraut" url="https://de.wikipedia.org/wiki/Lungenkr%C3%A4uter" />
+							<PlantCard plantname="Heckenkirsche" url="https://de.wikipedia.org/wiki/Heckenkirschen" />
+							<PlantCard plantname="Winterling" url="https://de.wikipedia.org/wiki/Winterling" />
+							<PlantCard plantname="Traubenhyazinthe" url="https://de.wikipedia.org/wiki/Traubenhyazinthen" />
 						</div>
+
 						<div class="col-12 col-md-4 text-center">
-							<div class="py-2 season-head">
+							<div class="py-2 pflanzen-subhead">
 								Sommer
 							</div>
-							<div class="my-3 pflanzen-card">
-								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Schlehdorn" target="_blank" rel="noopener">
-									<div class="mx-auto pflanzenbild schlehe" />
-									Schlehe
-								</a>
-							</div>
-							<div class="my-3 pflanzen-card">
-								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Fr%C3%BChlings-Krokus" target="_blank" rel="noopener">
-									<div class="mx-auto pflanzenbild krokus" />
-									Frühlings-Krokus
-								</a>
-							</div>
-							<div class="my-3 pflanzen-card">
-								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Lungenkr%C3%A4uter" target="_blank" rel="noopener">
-									<div class="mx-auto pflanzenbild lungenkraut" />
-									Lungenkraut
-								</a>
-							</div>
-							<div class="my-3 pflanzen-card">
-								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Heckenkirschen" target="_blank" rel="noopener">
-									<div class="mx-auto pflanzenbild heckenkirsche" />
-									Heckenkirsche
-								</a>
-							</div>
-							<div class="my-3 pflanzen-card">
-								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Winterling" target="_blank" rel="noopener">
-									<div class="mx-auto pflanzenbild winterling" />
-									Winterling
-								</a>
-							</div>
-							<div class="my-3 pflanzen-card">
-								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Traubenhyazinthen" target="_blank" rel="noopener">
-									<div class="mx-auto pflanzenbild traubenhyazinthe" />
-									Traubenhyazinthe
-								</a>
-							</div>
+							<PlantCard plantname="Glockenblume" url="https://de.wikipedia.org/wiki/Glockenblumen" />
+							<PlantCard plantname="Wicke" url="https://de.wikipedia.org/wiki/Wicken_(Vicia)" />
+							<PlantCard plantname="Ehrenpreis" url="https://de.wikipedia.org/wiki/Ehrenpreis" />
+							<PlantCard plantname="Garten-Resede" url="https://de.wikipedia.org/wiki/Garten-Resede" />
+							<PlantCard plantname="Berg-Ziest" url="https://de.wikipedia.org/wiki/Aufrechter_Ziest" />
+							<PlantCard plantname="Lavendel" url="https://de.wikipedia.org/wiki/Echter_Lavendel" />
 						</div>
+
 						<div class="col-12 col-md-4 pr-0 text-center">
-							<div class="py-2 season-head">
+							<div class="py-2 pflanzen-subhead">
 								Herbst
 							</div>
-							<div class="my-3 pflanzen-card">
-								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Schlehdorn" target="_blank" rel="noopener">
-									<div class="mx-auto pflanzenbild schlehe" />
-									Schlehe
-								</a>
-							</div>
-							<div class="my-3 pflanzen-card">
-								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Fr%C3%BChlings-Krokus" target="_blank" rel="noopener">
-									<div class="mx-auto pflanzenbild krokus" />
-									Frühlings-Krokus
-								</a>
-							</div>
-							<div class="my-3 pflanzen-card">
-								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Lungenkr%C3%A4uter" target="_blank" rel="noopener">
-									<div class="mx-auto pflanzenbild lungenkraut" />
-									Lungenkraut
-								</a>
-							</div>
-							<div class="my-3 pflanzen-card">
-								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Heckenkirschen" target="_blank" rel="noopener">
-									<div class="mx-auto pflanzenbild heckenkirsche" />
-									Heckenkirsche
-								</a>
-							</div>
-							<div class="my-3 pflanzen-card">
-								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Winterling" target="_blank" rel="noopener">
-									<div class="mx-auto pflanzenbild winterling" />
-									Winterling
-								</a>
-							</div>
-							<div class="my-3 pflanzen-card">
-								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Traubenhyazinthen" target="_blank" rel="noopener">
-									<div class="mx-auto pflanzenbild traubenhyazinthe" />
-									Traubenhyazinthe
-								</a>
-							</div>
+							<PlantCard plantname="Natternkopf" url="https://de.wikipedia.org/wiki/Gew%C3%B6hnlicher_Natternkopf" />
+							<PlantCard plantname="Skabiose" url="https://de.wikipedia.org/wiki/Skabiosen" />
+							<PlantCard plantname="Eisenhut" url="https://de.wikipedia.org/wiki/Eisenhut" />
+							<PlantCard plantname="Stockrose" url="https://de.wikipedia.org/wiki/Gew%C3%B6hnliche_Stockrose" />
+							<PlantCard plantname="Herbst-Aster" url="https://de.wikipedia.org/wiki/Astern" />
+							<PlantCard plantname="Sonnenblume" url="https://de.wikipedia.org/wiki/Sonnenblume" />
 						</div>
 					</div>
 				</div>
+
 				<div class="col-12 col-lg-5">
 					<div class="row px-5 px-lg-0 pr-lg-5">
-						<div class="col-12 py-2 mb-3 text-center pflanzenart-head">
+						<div class="col-12 py-2 mb-3 text-center pflanzen-head">
 							Nutzpflanzen
 						</div>
 						<div class="col-12 col-md-6 pl-0 text-center">
-							<div class="py-2 season-head">
+							<div class="py-2 pflanzen-subhead">
 								Früchte
 							</div>
-							<div class="my-3 pflanzen-card">
-								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Winterling" target="_blank" rel="noopener">
-									<div class="mx-auto pflanzenbild winterling" />
-									Winterling
-								</a>
-							</div>
-							<div class="my-3 pflanzen-card">
-								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Traubenhyazinthen" target="_blank" rel="noopener">
-									<div class="mx-auto pflanzenbild traubenhyazinthe" />
-									Traubenhyazinthe
-								</a>
-							</div>
+							<PlantCard plantname="Johannisbeere" url="https://de.wikipedia.org/wiki/Rote_Johannisbeere" />
+							<PlantCard plantname="Himbeere" url="https://de.wikipedia.org/wiki/Himbeere" />
+							<PlantCard plantname="Brombeere" url="https://de.wikipedia.org/wiki/Brombeeren" />
+							<PlantCard plantname="Apfel" url="https://de.wikipedia.org/wiki/Kulturapfel" />
 						</div>
+
 						<div class="col-12 col-md-6 pr-0 text-center">
-							<div class="py-2 season-head">
+							<div class="py-2 pflanzen-subhead">
 								Küchenkräuter
 							</div>
-							<div class="my-3 pflanzen-card">
-								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Winterling" target="_blank" rel="noopener">
-									<div class="mx-auto pflanzenbild winterling" />
-									Winterling
-								</a>
-							</div>
-							<div class="my-3 pflanzen-card">
-								<a class="pflanzenlink" href="https://de.wikipedia.org/wiki/Traubenhyazinthen" target="_blank" rel="noopener">
-									<div class="mx-auto pflanzenbild traubenhyazinthe" />
-									Traubenhyazinthe
-								</a>
-							</div>
+							<PlantCard plantname="Salbei" url="https://de.wikipedia.org/wiki/Echter_Salbei" />
+							<PlantCard plantname="Ysop" url="https://de.wikipedia.org/wiki/Ysop" />
+							<PlantCard plantname="Zitronenmelisse" url="https://de.wikipedia.org/wiki/Zitronenmelisse" />
+							<PlantCard plantname="Oregano" url="https://de.wikipedia.org/wiki/Oregano" />
+							<PlantCard plantname="Bohnenkraut" url="https://de.wikipedia.org/wiki/Bohnenkr%C3%A4uter" />
+							<PlantCard plantname="Thymian" url="https://de.wikipedia.org/wiki/Thymiane" />
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div id="home-infos" class="container-fluid my-5">
+		<div id="home-about" class="container-fluid my-5">
 			<div class="row justify-content-center px-5">
 				<div class="col col-lg-8">
 					Projektinfos
@@ -329,9 +229,13 @@
 
 <script>
 import { methodMixin } from '../methodMixin';
+import PlantCard from '../components/PlantCard.vue';
 
 export default {
 	name: 'Home',
+	components: {
+		PlantCard
+	},
 	mixins: [methodMixin],
 	props: {
 		msg: {
@@ -395,12 +299,12 @@ export default {
 	background: url("../../src/assets/media/bgnd_floral-illus.jpg") no-repeat center;
 	background-size: cover;
 
-	.pflanzenart-head {
+	.pflanzen-head {
 		border: 2px solid $bt-red;
 		font-weight: 600;
 		text-transform: uppercase;
 	}
-	.season-head {
+	.pflanzen-subhead {
 		border: 2px solid $bt-green;
 		font-weight: 600;
 		border-top-left-radius: 15px;

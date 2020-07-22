@@ -11,70 +11,74 @@
 			<span />
 		</div>
 		<div
-			class="navipanel"
+			class="navipanel-wrapper"
 			:class="{'open': naviOpen}"
 		>
-			<div class="navilinks">
-				<ul>
-					<li>
-						<router-link
-							to="/#home-top"
-							@click.native="anchorlinkNavi('#home-top')"
-						>
-							Home
-						</router-link>
-					</li>
-					<ul class="mb-2 mb-sm-4">
+			<div
+				class="navipanel"
+			>
+				<div class="navilinks">
+					<ul>
 						<li>
 							<router-link
-								to="/#home-intro"
-								@click.native="anchorlinkNavi('#home-intro')"
+								to="/#home-top"
+								@click.native="anchorlinkNavi('#home-top')"
 							>
-								Intro
+								Home
 							</router-link>
 						</li>
+						<ul class="mb-2 mb-sm-4">
+							<li>
+								<router-link
+									to="/#home-intro"
+									@click.native="anchorlinkNavi('#home-intro')"
+								>
+									Intro
+								</router-link>
+							</li>
+							<li>
+								<router-link
+									to="/#home-tipps"
+									@click.native="anchorlinkNavi('#home-tipps')"
+								>
+									Pflanztipps
+								</router-link>
+							</li>
+							<li>
+								<router-link
+									to="/#home-about"
+									@click.native="anchorlinkNavi('#home-about')"
+								>
+									Über das Projekt
+								</router-link>
+							</li>
+							<li>
+								<router-link
+									to="/#home-team"
+									@click.native="anchorlinkNavi('#home-team')"
+								>
+									Projekt-Team
+								</router-link>
+							</li>
+						</ul>
 						<li>
 							<router-link
-								to="/#home-tipps"
-								@click.native="anchorlinkNavi('#home-tipps')"
+								to="/survey"
+								@click.native="togglNav"
 							>
-								Pflanztipps
+								Test starten
 							</router-link>
 						</li>
-						<li>
+						<li class="multiline-navilink">
 							<router-link
-								to="/#home-about"
-								@click.native="anchorlinkNavi('#home-about')"
+								to="/imprint"
+								@click.native="togglNav"
 							>
-								Über das Projekt
-							</router-link>
-						</li>
-						<li>
-							<router-link
-								to="/#home-team"
-								@click.native="anchorlinkNavi('#home-team')"
-							>
-								Projekt-Team
+								Datenschutz/<br>Impressum
 							</router-link>
 						</li>
 					</ul>
-					<li>
-						<router-link
-							to="/survey"
-							@click.native="togglNav"
-						>
-							Test starten
-						</router-link>
-					</li>
-					<li class="multiline-navilink">
-						<router-link
-							to="/imprint"
-							@click.native="togglNav"
-						>
-							Datenschutz/<br>Impressum
-						</router-link>
-					</li>
-				</ul>
+				</div>
 			</div>
 		</div>
 	</nav>
@@ -193,25 +197,26 @@ export default {
 		width: 0%;
 		left: 50%;
 	}
-
-	.navipanel {
+	.navipanel-wrapper {
 		position: fixed;
 		top: 0;
-		// right: 0;
 		right: -30rem;
-		width: 27rem;
-		height: 100vh;
-		background-color: $bt-yellow-ultralight;
+		filter: drop-shadow(-1px 6px 3px $bt-shadow-color);
+		z-index: 1000;
 		visibility: hidden;
 		opacity: 0;
-		clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
 		transition: visibility $transitions-basic, right $transitions-basic, opacity $transitions-basic linear;
-		// transition: right $transitions-basic linear;
-		z-index: 1000;
 		&.open {
 			right: 0;
 			opacity: .9;
 			visibility: visible;
+		}
+
+		.navipanel {
+			width: 27rem;
+			height: 100vh;
+			background-color: $bt-white;
+			clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
 		}
 	}
 

@@ -1,15 +1,18 @@
 <template>
-	<div class="my-3 pflanzen-card">
+	<div class="mt-2 mb-4 pflanzen-card">
+		<a
+			:href="url"
+			target="_blank"
+			rel="noopener"
+			class="d-block mx-auto pflanzenbild"
+			:class="plantname"
+		/>
 		<a
 			class="pflanzenlink"
 			:href="url"
 			target="_blank"
 			rel="noopener"
 		>
-			<div
-				class="mx-auto pflanzenbild"
-				:class="plantname"
-			/>
 			{{ plantname }}
 		</a>
 	</div>
@@ -36,19 +39,17 @@ export default {
 	@import "../assets/sass/_colors.scss";
 
 	.pflanzen-card {
-		background-color: red;
 		.pflanzenbild {
 			width: 6rem;
 			height: 6rem;
 			border-radius: 100%;
-			border: 2px solid $bt-green;
 			background-size: 100%;
 			background-repeat: no-repeat;
 			background-position: center;
 		}
 		.pflanzenlink {
 			font-weight: 600;
-			color: $bt-green;
+			color: $bt-red;
 		}
 
 		// ZIERPFLANZEN

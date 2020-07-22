@@ -11,7 +11,10 @@
 .beebutton-large {
 	background-color: $bt-red;
 	font-size: 1.5rem;
-	padding: 1rem 4rem;
+	padding: .75rem 4rem;
+	@media (min-width: 768px) {
+		padding: 1rem 4rem;
+	}
 }
 
 .textlink-kalam {

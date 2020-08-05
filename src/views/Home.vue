@@ -190,9 +190,9 @@
 				<div class="col col-lg-8">
 					Projektinfos
 				</div>
-				<div class="col col-lg-3 twitter-timeline">
+				<div class="col col-lg-4 twitter-timeline">
 					<twitter>
-						<a class="twitter-timeline" data-height="700" data-dnt="true" data-chrome="transparent" href="https://twitter.com/wildbienentest?ref_src=twsrc%5Etfw">Tweets by wildbienentest</a>
+						<a class="twitter-timeline" data-height="500" data-dnt="true" data-chrome="transparent" href="https://twitter.com/wildbienentest?ref_src=twsrc%5Etfw">Tweets by wildbienentest</a>
 					</twitter>
 				</div>
 			</div>

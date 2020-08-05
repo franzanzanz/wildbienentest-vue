@@ -14,6 +14,9 @@
 				<img class="logo-footer" src="../assets/media/logo-wildbienentest.svg" alt="">
 			</div>
 		</div>
+		<ol>
+			<li v-for="item in imageSources" :key="item.number" v-html="item.content" />
+		</ol>
 	</div>
 </template>
 
@@ -21,10 +24,24 @@
 export default {
 	name: 'HelloWorld',
 	props: {
-		msg: {
-			type: String,
-			default: ''
+		content: {
+			type: Object,
+			default() {
+				return { message: 'nothing here.' };
+			}
 		}
+	},
+
+	data() {
+		return {
+			imageSources: []
+		};
+	},
+
+	mounted() {
+		this.content.imagesourcesHome.forEach(element => {
+			this.imageSources.push(element);
+		});
 	}
 };
 </script>

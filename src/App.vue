@@ -3,7 +3,9 @@
 		<div id="nav">
 			<Navi />
 			<router-view />
-			<Footer />
+			<Footer
+				:content="contentData"
+			/>
 		</div>
 	</div>
 </template>
@@ -12,6 +14,7 @@
 import Navi from './components/Navi.vue';
 import Footer from './components/Footer.vue';
 import { methodMixin } from './methodMixin';
+import datasource from './assets/sourcefile.json';
 
 export default {
 	name: 'WildbienenTest',
@@ -24,14 +27,23 @@ export default {
 
 	data() {
 		return {
-			twitterPosts: [],
-			twitterErrors: [],
-			state: 'start'
+			state: '',
+			contentData: datasource
 		};
+	},
+
+	// Watch route changes and set global state variable for dynamic content delivery to static components e.g. to footer
+	watch: {
+		$route(to) {
+			this.state = to.name;
+			console.log(this.state);
+		}
 	},
 
 	mounted() {
 		setTimeout(() => this.scrollFix(this.$route.hash), 1);
+		this.state = this.$route.name;
+		console.log(this.state);
 	},
 
 	methods: {

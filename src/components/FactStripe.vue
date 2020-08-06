@@ -1,7 +1,7 @@
 <template>
 	<div id="facts-stripe" class="container-fluid mb-5">
 		<div class="row facts-stripe px-5 py-5 justify-content-center justify-content-sm-between">
-			<div class="col-12 col-md-6 col-xl-2 fact-card text-center py-4 px-3 mb-5 mb-xl-0">
+			<div class="col-12 col-md-6 ml-md-auto mr-md-2 col-xl-2 mx-xl-auto fact-card text-center py-4 px-3 mb-5 mb-xl-0">
 				<h1>
 					550
 				</h1>
@@ -9,7 +9,7 @@
 					Wildbienenarten gibt es in Deutschland
 				</p>
 			</div>
-			<div class="col-12 col-md-6 col-xl-2 fact-card text-center py-4 px-3 mb-5 mb-xl-0">
+			<div class="col-12 col-md-6 mx-md-auto col-xl-2 mx-xl-auto fact-card text-center py-4 px-3 mb-5 mb-xl-0">
 				<h1>
 					70%
 				</h1>
@@ -17,7 +17,7 @@
 					der Nutzpflanzen weltweit sind auf Insektenbestäubung angewiesen
 				</p>
 			</div>
-			<div class="col-12 col-md-6 col-xl-2 fact-card text-center py-4 px-3 mb-5 mb-md-0">
+			<div class="col-12 col-md-6 mx-md-auto col-xl-2 mx-xl-auto fact-card text-center py-4 px-3 mb-5 mb-md-0">
 				<h1>
 					3.
 				</h1>
@@ -25,7 +25,7 @@
 					drittwichtigstes Nutztier Deutschlands ist die Biene
 				</p>
 			</div>
-			<div class="col-12 col-md-6 col-xl-2 fact-card text-center py-4 px-3 mb-5 mb-sm-0">
+			<div class="col-12 col-md-6 mr-md-auto ml-md-2 col-xl-2 mx-xl-auto fact-card text-center py-4 px-3 mb-5 mb-sm-0">
 				<h1>
 					2.000
 				</h1>
@@ -39,16 +39,26 @@
 
 <script>
 export default {
-	name: 'Facts-Stripe',
+	name: 'FactsStripe',
 	props: {
-		plantname: {
-			type: String,
-			default: ''
-		},
-		url: {
-			type: String,
-			default: ''
+		content: {
+			type: Object,
+			default() {
+				return { message: 'empty.' };
+			}
 		}
+	},
+
+	data () {
+		return {
+			stripetype: 'big',
+			headlines: [],
+			texts: []
+		};
+	},
+
+	computed: {
+
 	}
 };
 </script>

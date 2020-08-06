@@ -201,7 +201,7 @@ export default {
 		position: fixed;
 		top: 0;
 		right: -30rem;
-		filter: drop-shadow(-1px 6px 3px $bt-shadow-color);
+		filter: drop-shadow(-1px 6px 3px $shadow-color);
 		z-index: 1000;
 		visibility: hidden;
 		opacity: 0;
@@ -215,7 +215,7 @@ export default {
 		.navipanel {
 			width: 27rem;
 			height: 100vh;
-			background-color: $bt-white;
+			background-color: $white;
 			clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
 		}
 	}
@@ -241,12 +241,12 @@ export default {
 			color: black;
 			transition: color $transitions-basic;
 			&:hover {
-				color: $bt-red;
+				color: $red;
 				text-decoration: none;
 			}
 			&.active {
 				font-weight: 700;
-				color: $bt-red;
+				color: $red;
 			}
 		}
 		.multiline-navilink {

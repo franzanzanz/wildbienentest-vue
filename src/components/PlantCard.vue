@@ -49,7 +49,7 @@ export default {
 		}
 		.pflanzenlink {
 			font-weight: 600;
-			color: $bt-red;
+			color: $red;
 		}
 
 		// ZIERPFLANZEN

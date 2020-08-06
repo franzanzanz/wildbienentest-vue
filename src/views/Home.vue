@@ -30,7 +30,6 @@
 			<div class="row justify-content-center mb-5">
 				<button
 					class="btn btn-primary beebutton beebutton-large"
-					@click="$emit('showSurvey')"
 				>
 					Test starten
 				</button>
@@ -77,7 +76,6 @@
 						</p>
 						<button
 							class="btn btn-primary beebutton beebutton-large mt-3 align-self-center"
-							@click="$emit('showSurvey')"
 						>
 							Test starten
 						</button>
@@ -250,7 +248,7 @@ export default {
 	background: rgb(254,238,231);
 	background: linear-gradient(32deg, rgba(254,238,231,1) 0%, rgba(235,254,255,1) 100%);
 	border-radius: 15px;
-	border: 4px dotted $bt-red-ultralight;
+	border: 4px dotted $red-ultralight;
 }
 
 .pflanztipps-wrapper {
@@ -258,12 +256,12 @@ export default {
 	background-size: cover;
 
 	.pflanzen-head {
-		border: 2px solid $bt-red;
+		border: 2px solid $red;
 		font-weight: 600;
 		text-transform: uppercase;
 	}
 	.pflanzen-subhead {
-		border: 2px solid $bt-green;
+		border: 2px solid $green;
 		font-weight: 600;
 		border-top-left-radius: 15px;
 		border-bottom-right-radius: 15px;
@@ -274,11 +272,11 @@ export default {
 			width: 6rem;
 			height: 6rem;
 			border-radius: 100%;
-			border: 2px solid $bt-green;
+			border: 2px solid $green;
 		}
 		.pflanzenlink {
 			font-weight: 600;
-			color: $bt-green;
+			color: $green;
 		}
 		.schlehe {
 			background: url("https://upload.wikimedia.org/wikipedia/commons/7/7a/Schlehenbl%C3%BCte_IV.jpeg") no-repeat center;

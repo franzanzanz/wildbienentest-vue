@@ -72,13 +72,13 @@ export default {
 		background-size: cover;
 
 		.fact-card {
-			border: 4px dotted $bt-red-025alpha;
-			background-color: $bt-red-01alpha;
+			border: 4px dotted $red-025alpha;
+			background-color: $red-01alpha;
 			border-radius: 1rem;
 			h1 {
 				font-size: 5rem;
 				font-weight: 700;
-				color: $bt-red;
+				color: $red;
 				margin-bottom: -1rem;
 			}
 			p {

@@ -1,4 +1,20 @@
 {
+	"homepage": [
+		{
+			"sectionNumber" : 1,
+			"section" : "stage",
+			"content" : [
+				{
+					"type" : "headline",
+					"conent" : "Wie bienenfreundlich ist mein Garten?"
+				},
+				{
+					"type" : "copytext",
+					"conent" : "Hier steht ein kurzer Introtext, der in einem knappen Absatz vermittelt, welche Motivation und welcher Nutzen hinter diesem Online-Test hier stecken. Das hat den Hintergrund, dass Leute sofort mit dem Test beginnen können, wenn sie möchten, ohne längere Texte lesen zu müssen. "
+				}
+			]
+		}
+	],
 	"imagesourcesHome" : [
 		{
 			"number" : 1,
@@ -7,6 +23,10 @@
 		{
 			"number" : 2,
 			"content" : "Photo by <a href=\"https://unsplash.com/@zoegayah?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText\">Zoë Gayah Jonker</a> on <a href=\"https://unsplash.com/collections/5051770/wildgarten/53480b6fc0075b7b67d7c1e2f0fda3b0?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText\">Unsplash</a>"
+		},
+		{
+			"number" : 3,
+			"content" : "Background vector created by <a href='https://www.freepik.com/rawpixel-com'>rawpixel.com - www.freepik.com</a>"
 		}
 	]
 }

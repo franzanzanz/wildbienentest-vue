@@ -14,25 +14,25 @@
 			<div class="row justify-content-center mb-2">
 				<div class="col col-md-8 col-xl-6">
 					<p class="text-center">
-						Hier steht ein kurzer Introtext, der in einem knappen Absatz vermittelt, welche Motivation und welcher Nutzen hinter diesem Online-Test hier stecken. Das hat den Hintergrund, dass Leute sofort mit dem Test beginnen können, wenn sie möchten, ohne längere Texte lesen zu müssen.
+						Haben Sie sich eigentlich schon einmal gefragt, wie Ihr Garten aus Sicht einer Biene in puncto Gastfreundschaft abschneidet? Falls ja, dann hilft dieser Online-Test zur Abfrage der Bienenfreundlichkeit des eigenen Gartens bestimmt weiter. Sie beantworten 15 Fragen in den Kategorien Nistmöglichkeiten, Nahrungsangebot und Gefahren. Dadurch gewinnt der Test einen Eindruck von Ihrem Garten und kann Ihnen anschließend nützliche Tipps und gegebenenfalls Hinweise für eine Verbesserung der Wildbienenfreundlichkeit zur Hand geben.
 					</p>
 				</div>
 			</div>
-			<div class="row justify-content-center mb-5">
-				<router-link
-					class="textlink-kalam"
-					to="#home-intro"
-					@click.native="scrollFix('#home-intro')"
-				>
-					mehr lesen
-				</router-link>
-			</div>
-			<div class="row justify-content-center mb-5">
+			<div class="row justify-content-center mt-4">
 				<button
 					class="btn btn-primary beebutton beebutton-large"
 				>
 					Test starten
 				</button>
+			</div>
+			<div class="row justify-content-center my-4">
+				<router-link
+					class="textlink-kalam"
+					to="#home-intro"
+					@click.native="scrollFix('#home-intro-1')"
+				>
+					mehr Infos
+				</router-link>
 			</div>
 		</div>
 
@@ -188,9 +188,20 @@
 				<div class="col col-lg-8">
 					Projektinfos
 				</div>
-				<div class="col col-lg-4 twitter-timeline">
+				<div
+					v-if="allCookiesAllowed"
+					class="col col-lg-4 twitter-timeline"
+				>
 					<twitter>
-						<a class="twitter-timeline" data-height="500" data-dnt="true" data-chrome="transparent" href="https://twitter.com/wildbienentest?ref_src=twsrc%5Etfw">Tweets by wildbienentest</a>
+						<a
+							class="twitter-timeline"
+							data-height="500"
+							data-dnt="true"
+							data-chrome="transparent"
+							href="https://twitter.com/wildbienentest?ref_src=twsrc%5Etfw"
+						>
+							Tweets by wildbienentest
+						</a>
 					</twitter>
 				</div>
 			</div>
@@ -218,6 +229,22 @@ export default {
 		msg: {
 			type: String,
 			default: ''
+		},
+		showtwitter: {
+			type: Boolean,
+			default: false
+		}
+	},
+
+	data () {
+		return {
+			
+		};
+	},
+
+	computed: {
+		allCookiesAllowed: function () {
+			return this.$store.state.allCookies;
 		}
 	}
 
@@ -252,8 +279,8 @@ export default {
 }
 
 .pflanztipps-wrapper {
-	background: url("../../src/assets/media/bgnd_floral-illus.jpg") no-repeat center;
-	background-size: cover;
+	background: url("../../src/assets/media/floral_pattern_infinite_blurred.jpg") repeat center;
+	// background-size: cover;
 
 	.pflanzen-head {
 		border: 2px solid $red;

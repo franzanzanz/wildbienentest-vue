@@ -15,7 +15,8 @@
 			</div>
 			<div class="col-12 col-md-4 text-center">
 				<router-link
-					to="/"
+					:to="{ name: 'home' }"
+					@click.native="scrollFix('#home-top')"
 				>
 					<img class="logo-footer" src="../assets/media/logo-wildbienentest.svg" alt="">
 				</router-link>
@@ -33,8 +34,11 @@
 </template>
 
 <script>
+import { methodMixin } from '../methodMixin';
+
 export default {
-	name: 'HelloWorld',
+	name: 'Footer',
+	mixins: [methodMixin],
 	props: {
 		content: {
 			type: Object,

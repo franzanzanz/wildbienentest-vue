@@ -28,8 +28,13 @@ export default {
 	data() {
 		return {
 			state: '',
-			contentData: datasource
+			contentData: datasource,
+			cookiemodalVisible: true,
+			allCookies: ''
 		};
+	},
+
+	computed: {
 	},
 
 	// Watch route changes and set global state variable for dynamic content delivery to static components e.g. to footer
@@ -37,13 +42,21 @@ export default {
 		$route(to) {
 			this.state = to.name;
 			console.log(this.state);
+		},
+		allCookies: function () {
+			this.$store.commit('cookieChoiceDone');
+			this.$store.commit('cookieChoice', this.allCookies);
+			console.log('Button clicked: ' + this.$store.state.cookieChoice);
+			console.log('Decision made: ' + this.$store.state.allCookies);
 		}
 	},
 
 	mounted() {
 		setTimeout(() => this.scrollFix(this.$route.hash), 1);
 		this.state = this.$route.name;
-		console.log(this.state);
+		if (!this.$store.state.cookieChoice) {
+			this.showCookieModal();
+		}
 	},
 
 	methods: {
@@ -56,6 +69,27 @@ export default {
 		},
 		showStart() {
 			this.state = 'start';
+		},
+		showCookieModal() {
+			this.allCookies = '';
+			this.$bvModal.msgBoxConfirm('Diese Website verwendet funktionale Cookies, die zur Benutzung des hier angebotenen Online-Tests notwendig sind. Daneben werden optional auch Cookies von Drittanbietern verwendet, zur Einbindung unserer Twitter-Timeline. Bitte wählen Sie, welche Cookies Sie zulassen möchten.',{
+				title: 'Cookie Information',
+				size: 'md',
+				buttonSize: 'md',
+				okVariant: 'danger',
+				okTitle: 'Okay, alle Cookies.',
+				cancelTitle: 'Nur funktionale Cookies.',
+				footerClass: 'p-3',
+				hideHeaderClose: true,
+				noCloseOnBackdrop: true,
+				noCloseOnEsc: true,
+				centered: true
+			}).then(value => {
+				this.allCookies = value;
+			})
+				.catch(err => {
+					console.log(err); // An error occurred
+				});
 		}
 	}
 };

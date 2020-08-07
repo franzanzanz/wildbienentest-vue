@@ -21,7 +21,7 @@
 					<ul>
 						<li>
 							<router-link
-								to="/#home-top"
+								:to="{ name: 'home' }"
 								@click.native="anchorlinkNavi('#home-top')"
 							>
 								Home
@@ -30,15 +30,15 @@
 						<ul class="mb-2 mb-sm-4">
 							<li>
 								<router-link
-									to="/#home-intro"
-									@click.native="anchorlinkNavi('#home-intro')"
+									:to="{ name: 'home' }"
+									@click.native="anchorlinkNavi('#home-intro-1')"
 								>
 									Intro
 								</router-link>
 							</li>
 							<li>
 								<router-link
-									to="/#home-tipps"
+									:to="{ name: 'home' }"
 									@click.native="anchorlinkNavi('#home-tipps')"
 								>
 									Pflanztipps
@@ -46,7 +46,7 @@
 							</li>
 							<li>
 								<router-link
-									to="/#home-about"
+									:to="{ name: 'home' }"
 									@click.native="anchorlinkNavi('#home-about')"
 								>
 									Über das Projekt
@@ -54,7 +54,7 @@
 							</li>
 							<li>
 								<router-link
-									to="/#home-team"
+									:to="{ name: 'home' }"
 									@click.native="anchorlinkNavi('#home-team')"
 								>
 									Projekt-Team
@@ -63,7 +63,7 @@
 						</ul>
 						<li>
 							<router-link
-								to="/survey"
+								:to="{ name: 'survey' }"
 								@click.native="togglNav"
 							>
 								Test starten
@@ -71,7 +71,7 @@
 						</li>
 						<li class="multiline-navilink">
 							<router-link
-								to="/imprint"
+								:to="{ name: 'imprint' }"
 								@click.native="togglNav"
 							>
 								Datenschutz/<br>Impressum
@@ -137,7 +137,7 @@ export default {
 		-o-transition: $transitions-basic ease-in-out;
 		transition: $transitions-basic ease-in-out;
 		cursor: pointer;
-		z-index: 9000;
+		z-index: 1000;
 
 		span {
 			display: block;
@@ -202,7 +202,7 @@ export default {
 		top: 0;
 		right: -30rem;
 		filter: drop-shadow(-1px 6px 3px $shadow-color);
-		z-index: 1000;
+		z-index: 999;
 		visibility: hidden;
 		opacity: 0;
 		transition: visibility $transitions-basic, right $transitions-basic, opacity $transitions-basic linear;

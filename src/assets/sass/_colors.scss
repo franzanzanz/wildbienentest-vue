@@ -1,4 +1,5 @@
 $white: #FFF;
+$black: #201E1E;
 
 $red: #FF4F00;
 $red-darker: #E14600;
@@ -18,3 +19,21 @@ $red-025alpha: rgba(255, 79, 0, .25);
 $yellow-02alpha: rgba(255, 210, 0, .6);
 
 $shadow-color: rgba(50, 50, 0, 0.25);
+
+
+$peach-1: #FFC693;
+$peach-2: #FFAC93;
+$peach-3: #FF9493;
+
+$lime-1: #C0F185;
+$lime-2: #95E48E;
+
+// GRADIENTS
+
+$gradient-peach-webkit: -webkit-linear-gradient(bottom left, $peach-1, $peach-3);
+$gradient-peach-moz: -moz-linear-gradient(bottom left, $peach-1, $peach-3);
+$gradient-peach: linear-gradient(to top right, $peach-1, $peach-3);
+
+$gradient-lime-webkit: -webkit-linear-gradient(bottom left, $lime-1, $lime-2);
+$gradient-lime-moz: -moz-linear-gradient(bottom left, $lime-1, $lime-2);
+$gradient-lime: linear-gradient(to top right, $lime-1, $lime-2);

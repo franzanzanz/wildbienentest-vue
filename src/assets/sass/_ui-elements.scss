@@ -1,3 +1,11 @@
+a {
+	color: $red;
+	&:hover {
+		color: $red-darker;
+		text-decoration: none;
+	}
+}
+
 .beebutton {
 	font-family: 'Kalam', Arial, sans-serif;
 	border: none;

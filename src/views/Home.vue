@@ -87,8 +87,8 @@
 		<!-- PFLANZTIPPS SECTION -->
 		<div id="home-tipps" class="pflanztipps-wrapper my-5 py-5">
 			<div class="container">
-				<div class="row justify-content-center">
-					<div class="col col-lg-6">
+				<div class="row text-center">
+					<div class="col">
 						<h1 class="mb-4">
 							Pflanztipps
 						</h1>
@@ -98,82 +98,94 @@
 				<div class="row justify-content-center">
 					<div class="col col-sm-8">
 						<p class="mb-5">
-							In der Übersicht unten finden Sie eine kleine Auswahl an Pflanzen, die bei Wildbienen besonders beliebt sind. Wenn Sie sich noch intensiver mit dem Thema befassen wollen, können wir Ihnen <a href="https://www.bmel.de/SharedDocs/Downloads/Broschueren/Bienenlexikon.pdf?__blob=publicationFile" target="_blank" rel="noopener">dieses Infodokument</a> des Bundesministeriums für Ernährung und Landwirtschaft wärmstens empfehlen.
+							In der Übersicht unten finden Sie eine kleine Auswahl an Pflanzen, die bei Wildbienen besonders beliebt sind. Wenn Sie sich noch eingehender mit dem Thema befassen möchten, schauen Sie sich unsere <a href="#home-tipps">Link-Tipps</a> weiter unten an.
 						</p>
+					</div>
+				</div>
+
+				<div class="row text-center">
+					<div class="col-12">
+						<h2 class="mb-5 red">
+							Diese Pflanzen mögen Wildbienen ganz besonders
+						</h2>
 					</div>
 				</div>
 			</div>
 
-			<div class="container-fluid">
+			<div class="container-fluid container-pflanztipps">
 				<div class="row">
 					<div class="col-12 col-lg-7">
-						<div class="row px-5 px-lg-0 pl-lg-5 mr-lg-4">
-							<div class="col-12 py-2 mb-3 text-center pflanzen-head">
-								Zierpflanzen
-							</div>
-							<div class="col-12 col-md-4 px-0 text-center">
-								<div class="py-2 pflanzen-subhead">
-									Frühjahr
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-12 py-3 mb-3 text-center pflanzen-head">
+									Zierpflanzen
 								</div>
-								<PlantCard plantname="Schlehe" url="https://de.wikipedia.org/wiki/Schlehdorn" />
-								<PlantCard plantname="Frühlingskrokus" url="https://de.wikipedia.org/wiki/Fr%C3%BChlings-Krokus" />
-								<PlantCard plantname="Lungenkraut" url="https://de.wikipedia.org/wiki/Lungenkr%C3%A4uter" />
-								<PlantCard plantname="Heckenkirsche" url="https://de.wikipedia.org/wiki/Heckenkirschen" />
-								<PlantCard plantname="Winterling" url="https://de.wikipedia.org/wiki/Winterling" />
-								<PlantCard plantname="Traubenhyazinthe" url="https://de.wikipedia.org/wiki/Traubenhyazinthen" />
-							</div>
+								<div class="col-12 col-md-4 text-center px-0 pr-md-2">
+									<div class="py-3 mb-4 pflanzen-subhead spring">
+										Frühjahr
+									</div>
+									<PlantCard plantname="Schlehe" url="https://de.wikipedia.org/wiki/Schlehdorn" />
+									<PlantCard plantname="Frühlingskrokus" url="https://de.wikipedia.org/wiki/Fr%C3%BChlings-Krokus" />
+									<PlantCard plantname="Lungenkraut" url="https://de.wikipedia.org/wiki/Lungenkr%C3%A4uter" />
+									<PlantCard plantname="Heckenkirsche" url="https://de.wikipedia.org/wiki/Heckenkirschen" />
+									<PlantCard plantname="Winterling" url="https://de.wikipedia.org/wiki/Winterling" />
+									<PlantCard plantname="Traubenhyazinthe" url="https://de.wikipedia.org/wiki/Traubenhyazinthen" />
+								</div>
 
-							<div class="col-12 col-md-4 text-center">
-								<div class="py-2 pflanzen-subhead">
-									Sommer
+								<div class="col-12 col-md-4 text-center px-0 px-md-2">
+									<div class="py-3 mb-4 pflanzen-subhead summer">
+										Sommer
+									</div>
+									<PlantCard plantname="Glockenblume" url="https://de.wikipedia.org/wiki/Glockenblumen" />
+									<PlantCard plantname="Wicke" url="https://de.wikipedia.org/wiki/Wicken_(Vicia)" />
+									<PlantCard plantname="Ehrenpreis" url="https://de.wikipedia.org/wiki/Ehrenpreis" />
+									<PlantCard plantname="Garten-Resede" url="https://de.wikipedia.org/wiki/Garten-Resede" />
+									<PlantCard plantname="Berg-Ziest" url="https://de.wikipedia.org/wiki/Aufrechter_Ziest" />
+									<PlantCard plantname="Lavendel" url="https://de.wikipedia.org/wiki/Echter_Lavendel" />
 								</div>
-								<PlantCard plantname="Glockenblume" url="https://de.wikipedia.org/wiki/Glockenblumen" />
-								<PlantCard plantname="Wicke" url="https://de.wikipedia.org/wiki/Wicken_(Vicia)" />
-								<PlantCard plantname="Ehrenpreis" url="https://de.wikipedia.org/wiki/Ehrenpreis" />
-								<PlantCard plantname="Garten-Resede" url="https://de.wikipedia.org/wiki/Garten-Resede" />
-								<PlantCard plantname="Berg-Ziest" url="https://de.wikipedia.org/wiki/Aufrechter_Ziest" />
-								<PlantCard plantname="Lavendel" url="https://de.wikipedia.org/wiki/Echter_Lavendel" />
-							</div>
 
-							<div class="col-12 col-md-4 pr-0 text-center">
-								<div class="py-2 pflanzen-subhead">
-									Herbst
+								<div class="col-12 col-md-4 text-center px-0 pl-md-2">
+									<div class="py-3 mb-4 pflanzen-subhead fall">
+										Herbst
+									</div>
+									<PlantCard plantname="Natternkopf" url="https://de.wikipedia.org/wiki/Gew%C3%B6hnlicher_Natternkopf" />
+									<PlantCard plantname="Skabiose" url="https://de.wikipedia.org/wiki/Skabiosen" />
+									<PlantCard plantname="Eisenhut" url="https://de.wikipedia.org/wiki/Eisenhut" />
+									<PlantCard plantname="Stockrose" url="https://de.wikipedia.org/wiki/Gew%C3%B6hnliche_Stockrose" />
+									<PlantCard plantname="Herbst-Aster" url="https://de.wikipedia.org/wiki/Astern" />
+									<PlantCard plantname="Sonnenblume" url="https://de.wikipedia.org/wiki/Sonnenblume" />
 								</div>
-								<PlantCard plantname="Natternkopf" url="https://de.wikipedia.org/wiki/Gew%C3%B6hnlicher_Natternkopf" />
-								<PlantCard plantname="Skabiose" url="https://de.wikipedia.org/wiki/Skabiosen" />
-								<PlantCard plantname="Eisenhut" url="https://de.wikipedia.org/wiki/Eisenhut" />
-								<PlantCard plantname="Stockrose" url="https://de.wikipedia.org/wiki/Gew%C3%B6hnliche_Stockrose" />
-								<PlantCard plantname="Herbst-Aster" url="https://de.wikipedia.org/wiki/Astern" />
-								<PlantCard plantname="Sonnenblume" url="https://de.wikipedia.org/wiki/Sonnenblume" />
 							</div>
 						</div>
 					</div>
 
 					<div class="col-12 col-lg-5">
-						<div class="row px-5 px-lg-0 pr-lg-5">
-							<div class="col-12 py-2 mb-3 text-center pflanzen-head">
-								Nutzpflanzen
-							</div>
-							<div class="col-12 col-md-6 pl-0 text-center">
-								<div class="py-2 pflanzen-subhead">
-									Früchte
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-12 py-3 mb-3 text-center pflanzen-head nutzpflanzen">
+									Nutzpflanzen
 								</div>
-								<PlantCard plantname="Johannisbeere" url="https://de.wikipedia.org/wiki/Rote_Johannisbeere" />
-								<PlantCard plantname="Himbeere" url="https://de.wikipedia.org/wiki/Himbeere" />
-								<PlantCard plantname="Brombeere" url="https://de.wikipedia.org/wiki/Brombeeren" />
-								<PlantCard plantname="Apfel" url="https://de.wikipedia.org/wiki/Kulturapfel" />
-							</div>
+								<div class="col-12 col-md-6 text-center px-0 pr-md-2">
+									<div class="py-3 mb-4 pflanzen-subhead fruit">
+										Früchte
+									</div>
+									<PlantCard plantname="Johannisbeere" url="https://de.wikipedia.org/wiki/Rote_Johannisbeere" />
+									<PlantCard plantname="Himbeere" url="https://de.wikipedia.org/wiki/Himbeere" />
+									<PlantCard plantname="Brombeere" url="https://de.wikipedia.org/wiki/Brombeeren" />
+									<PlantCard plantname="Apfel" url="https://de.wikipedia.org/wiki/Kulturapfel" />
+								</div>
 
-							<div class="col-12 col-md-6 pr-0 text-center">
-								<div class="py-2 pflanzen-subhead">
-									Küchenkräuter
+								<div class="col-12 col-md-6 text-center px-0 pl-md-2">
+									<div class="py-3 mb-4 pflanzen-subhead herbs">
+										Küchenkräuter
+									</div>
+									<PlantCard plantname="Salbei" url="https://de.wikipedia.org/wiki/Echter_Salbei" />
+									<PlantCard plantname="Ysop" url="https://de.wikipedia.org/wiki/Ysop" />
+									<PlantCard plantname="Zitronenmelisse" url="https://de.wikipedia.org/wiki/Zitronenmelisse" />
+									<PlantCard plantname="Oregano" url="https://de.wikipedia.org/wiki/Oregano" />
+									<PlantCard plantname="Bohnenkraut" url="https://de.wikipedia.org/wiki/Bohnenkr%C3%A4uter" />
+									<PlantCard plantname="Thymian" url="https://de.wikipedia.org/wiki/Thymiane" />
 								</div>
-								<PlantCard plantname="Salbei" url="https://de.wikipedia.org/wiki/Echter_Salbei" />
-								<PlantCard plantname="Ysop" url="https://de.wikipedia.org/wiki/Ysop" />
-								<PlantCard plantname="Zitronenmelisse" url="https://de.wikipedia.org/wiki/Zitronenmelisse" />
-								<PlantCard plantname="Oregano" url="https://de.wikipedia.org/wiki/Oregano" />
-								<PlantCard plantname="Bohnenkraut" url="https://de.wikipedia.org/wiki/Bohnenkr%C3%A4uter" />
-								<PlantCard plantname="Thymian" url="https://de.wikipedia.org/wiki/Thymiane" />
 							</div>
 						</div>
 					</div>
@@ -238,7 +250,7 @@ export default {
 
 	data () {
 		return {
-			
+
 		};
 	},
 
@@ -253,6 +265,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@import "../assets/sass/_variables.scss";
 @import "../assets/sass/_colors.scss";
 @import "../assets/sass/_animations.scss";
 
@@ -274,7 +287,7 @@ export default {
 .twitter-timeline {
 	background: rgb(254,238,231);
 	background: linear-gradient(32deg, rgba(254,238,231,1) 0%, rgba(235,254,255,1) 100%);
-	border-radius: 15px;
+	border-radius: $radius-base;
 	border: 4px dotted $red-ultralight;
 }
 
@@ -282,16 +295,53 @@ export default {
 	background: url("../../src/assets/media/floral_pattern_infinite_blurred.jpg") repeat center;
 	// background-size: cover;
 
+	.container-pflanztipps {
+		max-width: 1200px;
+	}
+
 	.pflanzen-head {
-		border: 2px solid $red;
 		font-weight: 600;
 		text-transform: uppercase;
+		border-top-left-radius: $radius-base;
+		border-top-right-radius: $radius-base;
+
+		background: $peach-1;
+		background: $gradient-peach-webkit;
+		background: $gradient-peach-moz;
+		background: $gradient-peach;
+
+		&.nutzpflanzen {
+			background: $lime-1;
+			background: $gradient-lime-webkit;
+			background: $gradient-lime-moz;
+			background: $gradient-lime;
+		}
 	}
 	.pflanzen-subhead {
-		border: 2px solid $green;
 		font-weight: 600;
-		border-top-left-radius: 15px;
-		border-bottom-right-radius: 15px;
+		border-top-left-radius: $radius-base;
+		border-top-right-radius: $radius-base;
+		background: $lime-1;
+
+		&.spring {
+			background: $peach-1;
+		}
+
+		&.summer {
+			background: $peach-2;
+		}
+
+		&.fall {
+			background: $peach-3;
+		}
+
+		&.fruit {
+			background: $lime-1;
+		}
+
+		&.herbs {
+			background: $lime-2;
+		}
 	}
 
 	.pflanzen-card {

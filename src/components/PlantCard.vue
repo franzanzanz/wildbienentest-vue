@@ -1,5 +1,5 @@
 <template>
-	<div class="mt-2 mb-4 pflanzen-card">
+	<div class="mb-4 pflanzen-card">
 		<a
 			:href="url"
 			target="_blank"

@@ -1,11 +1,20 @@
 html, body {
-	color: black;
+	color: $black;
 }
 
 h1 {
 	font-family: 'Kalam', Arial, Helvetica, sans-serif;
 	font-size: $font-size-base-h1;
 	text-align: center;
+}
+
+h2 {
+	font-family: 'Kalam', Arial, Helvetica, sans-serif;
+	font-size: $font-size-base-h2;
+	font-weight: 600;
+	&.red {
+		color: $red;
+	}
 }
 
 p {

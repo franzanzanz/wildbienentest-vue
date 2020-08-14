@@ -1,21 +1,23 @@
 <template>
-	<div class="mb-4 pflanzen-card">
-		<a
-			:href="url"
-			target="_blank"
-			rel="noopener"
-			class="d-block mx-auto pflanzenbild"
-			:class="plantname"
-		/>
-		<a
-			class="pflanzenlink"
-			:href="url"
-			target="_blank"
-			rel="noopener"
+	<a
+		:href="url"
+		target="_blank"
+		rel="noopener"
+	>
+		<div
+			class="mb-4 pflanzen-card p-4"
 		>
-			{{ plantname }}
-		</a>
-	</div>
+			<span
+				class="d-block mx-auto pflanzenbild mb-2"
+				:class="plantname"
+			/>
+			<span
+				class="pflanzenlink"
+			>
+				{{ plantname }}
+			</span>
+		</div>
+	</a>
 </template>
 
 <script>
@@ -30,18 +32,25 @@ export default {
 			type: String,
 			default: ''
 		}
+	},
+	methods: {
+
 	}
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+	@import "../assets/sass/_variables.scss";
 	@import "../assets/sass/_colors.scss";
 
 	.pflanzen-card {
+		background-color: $red-01alpha;
+		border-radius: $radius-base;
+
 		.pflanzenbild {
-			width: 6rem;
-			height: 6rem;
+			width: 8rem;
+			height: 8rem;
 			border-radius: 100%;
 			background-size: 100%;
 			background-repeat: no-repeat;
@@ -49,6 +58,7 @@ export default {
 		}
 		.pflanzenlink {
 			font-weight: 600;
+			font-size: 1.2rem;
 			color: $red;
 		}
 

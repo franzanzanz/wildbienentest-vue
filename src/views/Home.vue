@@ -1,38 +1,46 @@
 <template>
 	<div>
-		<div id="home-top" class="stage container-fluid mb-5 pb-4 pb-sm-0">
-			<div class="row justify-content-center">
-				<div class="col-12 text-sm-center pl-4 px-sm-0">
-					<img class="logo-stage mt-3 mb-4 mb-sm-5 " src="../../src/assets/media/logo-wildbienentest.svg" alt="">
+		<div id="home-top" class="stage container-fluid mb-5 pb-4 pb-sm-0 px-0">
+			<parallax
+				:speed-factor="0.2"
+				class="stage-image"
+			>
+				<img src="../../src/assets/media/stage_blurred.jpg" alt="">
+			</parallax>
+			<div class="stage-content container-fluid">
+				<div class="row justify-content-center">
+					<div class="col-12 text-sm-center pl-4 px-sm-0">
+						<img class="logo-stage mt-3 mb-4 mb-sm-5 " src="../../src/assets/media/logo-wildbienentest.svg" alt="">
+					</div>
 				</div>
-			</div>
-			<div class="row justify-content-center mt-0 mt-sm-5 mb-3">
-				<div class="col col-lg-6">
-					<h1>Wie bienenfreundlich <br>ist mein Garten?</h1>
+				<div class="row justify-content-center mt-0 mt-sm-5">
+					<div class="col col-lg-6">
+						<h1>Wie bienenfreundlich <br>ist mein Garten?</h1>
+					</div>
 				</div>
-			</div>
-			<div class="row justify-content-center mb-2">
-				<div class="col col-md-8 col-xl-6">
-					<p class="text-center">
-						Haben Sie sich eigentlich schon einmal gefragt, wie Ihr Garten aus Sicht einer Biene in puncto Gastfreundschaft abschneidet? Falls ja, dann hilft dieser Online-Test zur Abfrage der Bienenfreundlichkeit des eigenen Gartens bestimmt weiter. Sie beantworten 15 Fragen in den Kategorien Nistmöglichkeiten, Nahrungsangebot und Gefahren. Dadurch gewinnt der Test einen Eindruck von Ihrem Garten und kann Ihnen anschließend nützliche Tipps und gegebenenfalls Hinweise für eine Verbesserung der Wildbienenfreundlichkeit zur Hand geben.
-					</p>
+				<div class="row justify-content-center mb-2">
+					<div class="col col-md-8 col-xl-6">
+						<p class="text-center">
+							Haben Sie sich eigentlich schon einmal gefragt, wie Ihr Garten aus Sicht einer Biene in puncto Gastfreundschaft abschneidet? Falls ja, dann hilft dieser Online-Test zur Abfrage der Bienenfreundlichkeit des eigenen Gartens bestimmt weiter. Sie beantworten 15 Fragen in den Kategorien Nistmöglichkeiten, Nahrungsangebot und Gefahren. Dadurch gewinnt der Test einen Eindruck von Ihrem Garten und kann Ihnen anschließend nützliche Tipps und gegebenenfalls Hinweise für eine Verbesserung der Wildbienenfreundlichkeit zur Hand geben.
+						</p>
+					</div>
 				</div>
-			</div>
-			<div class="row justify-content-center mt-4">
-				<button
-					class="btn btn-primary beebutton beebutton-large"
-				>
-					Test starten
-				</button>
-			</div>
-			<div class="row justify-content-center my-4">
-				<router-link
-					class="textlink-kalam"
-					to="#home-intro"
-					@click.native="scrollFix('#home-intro-1')"
-				>
-					mehr Infos
-				</router-link>
+				<div class="row justify-content-center mt-4">
+					<button
+						class="btn btn-primary beebutton beebutton-large"
+					>
+						Test starten
+					</button>
+				</div>
+				<div class="row justify-content-center my-4">
+					<router-link
+						class="textlink-kalam"
+						to="#home-intro"
+						@click.native="scrollFix('#home-intro-1')"
+					>
+						mehr Infos
+					</router-link>
+				</div>
 			</div>
 		</div>
 
@@ -42,13 +50,13 @@
 			<div id="home-intro-1" class="container mb-5">
 				<div class="row justify-content-center">
 					<div class="col col-lg-6">
-						<h1 class="mb-4">
+						<h1>
 							Wie bienenfreundlich <br>ist mein Garten?
 						</h1>
 					</div>
 				</div>
 				<div class="row justify-content-center">
-					<div class="col col-sm-8">
+					<div class="col col-lg-8">
 						<p>
 							Wussten Sie, dass es in Deutschland rund 550 Wildbienenarten gibt? Nein? Aber wussten Sie denn, dass 70% der weltweit wichtigsten Nutzpflanzen auf die Bestäubung durch Insekten angewiesen sind? Die Biene ist Deutschlands drittwichtigstes Nutztier nach Schwein und Rind. Sie besucht am Tag bis zu 2.000 Blüten.
 						</p>
@@ -58,7 +66,7 @@
 			<FactStripe />
 			<div id="home-intro-2" class="container">
 				<div class="row justify-content-center">
-					<div class="col col-sm-8 d-flex flex-column">
+					<div class="col col-lg-8 d-flex flex-column">
 						<p>
 							Wenn es sie nicht mehr gibt, haben wir sehr bald ein Problem. Moment mal – dieses Problem haben wir bereits! Über die Hälfte der Wildbienenarten in Deutschland sind vom Aussterben bedroht. In manchen Gegenden gibt es gar keine Wildbienen mehr.
 						</p>
@@ -89,14 +97,14 @@
 			<div class="container">
 				<div class="row text-center">
 					<div class="col">
-						<h1 class="mb-4">
+						<h1>
 							Pflanztipps
 						</h1>
 					</div>
 				</div>
 
 				<div class="row justify-content-center">
-					<div class="col col-sm-8">
+					<div class="col col-lg-8">
 						<p class="mb-5">
 							In der Übersicht unten finden Sie eine kleine Auswahl an Pflanzen, die bei Wildbienen besonders beliebt sind. Wenn Sie sich noch eingehender mit dem Thema befassen möchten, schauen Sie sich unsere <a href="#home-tipps">Link-Tipps</a> weiter unten an.
 						</p>
@@ -195,10 +203,20 @@
 
 		<!-- PROJECTINFO SECTION -->
 
-		<div id="home-about" class="container-fluid my-5">
-			<div class="row justify-content-center px-5">
-				<div class="col col-lg-8">
-					Projektinfos
+		<div id="home-about" class="container my-5">
+			<div
+				:class="allCookiesAllowed ? '' : 'justify-content-center'"
+				class="row"
+			>
+				<div
+					:class="projectInfoClasses"
+				>
+					<h1 class="text-left">
+						Zum Projekt
+					</h1>
+					<p>
+						Im Wintersemester 2015/2016 hat sich an der Leuphana Universität Lüneburg das Projektteam für Inter- und Transdisziplinäre Zusammenarbeit zum Thema Bienen in der Stadt gebildet. Das Team bestand aus fünf Studentinnen des Nebenfachs Nachhaltigkeitsnaturwissenschaften – im Hauptfach studierten sie Wirtschaftspsychologie, Politik- oder Kulturwissenschaften. Unter der methodischen und fachlichen Betreuung von drei Dozentinnen wurde in dem halbjährigen Projekt gemeinsam an einer Forschungsfrage und daraufhin an dem hier vorgestellten Test gearbeitet. <br><br>Als Ziel des Projekts galt es, Wissen und Methoden verschiedener Fachbereiche („Disziplinen“) zu integrieren. Dies geschah durch die verschiedenen Fachrichtungen der Studierenden, aber auch durch den Einbezug von Praxisakteuren in die Forschungsarbeit. So wurden zum Beispiel Interviews mit Berufsimkern und Vertretern des NABU geführt.
+					</p>
 				</div>
 				<div
 					v-if="allCookiesAllowed"
@@ -229,12 +247,14 @@
 import { methodMixin } from '../methodMixin';
 import FactStripe from '../components/FactStripe.vue';
 import PlantCard from '../components/PlantCard.vue';
+import Parallax from 'vue-parallaxy';
 
 export default {
 	name: 'Home',
 	components: {
 		FactStripe,
-		PlantCard
+		PlantCard,
+		Parallax
 	},
 	mixins: [methodMixin],
 	props: {
@@ -257,6 +277,10 @@ export default {
 	computed: {
 		allCookiesAllowed: function () {
 			return this.$store.state.allCookies;
+		},
+
+		projectInfoClasses: function () {
+			return this.allCookiesAllowed ? 'col col-lg-8 pr-lg-5' : 'col col-lg-8';
 		}
 	}
 
@@ -270,8 +294,17 @@ export default {
 @import "../assets/sass/_animations.scss";
 
 .stage {
-	background: url("../../src/assets/media/stage_blurred.jpg") no-repeat fixed center;
-	background-size: cover;
+	// background: url("../../src/assets/media/stage_blurred.jpg") no-repeat center center fixed;
+	// background-size: cover;
+	// -webkit-background-size: cover;
+  // -moz-background-size: cover;
+	// -o-background-size: cover;
+
+	.stage-content {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
 
 	@media (min-width: 768px) {
 		height: 100vh;
@@ -280,8 +313,6 @@ export default {
 
 .logo-stage {
 	width: 5rem;
-	// margin-top: 1rem;
-	// margin-bottom: 3rem;
 }
 
 .twitter-timeline {
@@ -341,43 +372,6 @@ export default {
 
 		&.herbs {
 			background: $lime-2;
-		}
-	}
-
-	.pflanzen-card {
-		.pflanzenbild {
-			width: 6rem;
-			height: 6rem;
-			border-radius: 100%;
-			border: 2px solid $green;
-		}
-		.pflanzenlink {
-			font-weight: 600;
-			color: $green;
-		}
-		.schlehe {
-			background: url("https://upload.wikimedia.org/wikipedia/commons/7/7a/Schlehenbl%C3%BCte_IV.jpeg") no-repeat center;
-			background-size: 200%;
-		}
-		.krokus {
-			background: url("https://upload.wikimedia.org/wikipedia/commons/e/e2/CrocusVernus.jpg") no-repeat center;
-			background-size: 200%;
-		}
-		.lungenkraut {
-			background: url("https://upload.wikimedia.org/wikipedia/commons/4/44/Pulmonaria_affinis.jpg") no-repeat center;
-			background-size: 100%;
-		}
-		.heckenkirsche {
-			background: url("https://upload.wikimedia.org/wikipedia/commons/0/0e/Wohlriechende_Heckenkirsche%2C_Passau.jpg") no-repeat center;
-			background-size: 300%;
-		}
-		.winterling {
-			background: url("https://upload.wikimedia.org/wikipedia/commons/b/b4/Winterling-Bluete-70.jpg") no-repeat center;
-			background-size: 150%;
-		}
-		.traubenhyazinthe {
-			background: url("https://upload.wikimedia.org/wikipedia/commons/1/1a/Muscari_armeniacum_4.jpg") no-repeat center;
-			background-size: 200%;
 		}
 	}
 }

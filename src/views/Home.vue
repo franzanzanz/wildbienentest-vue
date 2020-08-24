@@ -1,13 +1,7 @@
 <template>
 	<div>
-		<div id="home-top" class="stage container-fluid mb-5 pb-4 pb-sm-0 px-0">
-			<parallax
-				:speed-factor="0.2"
-				class="stage-image"
-			>
-				<img src="../../src/assets/media/stage_blurred.jpg" alt="">
-			</parallax>
-			<div class="stage-content container-fluid">
+		<div id="home-top" class="stage-wrapper container-fluid mb-5 pb-4 pb-sm-0 px-0">
+			<div class="stage-content">
 				<div class="row justify-content-center">
 					<div class="col-12 text-sm-center pl-4 px-sm-0">
 						<img class="logo-stage mt-3 mb-4 mb-sm-5 " src="../../src/assets/media/logo-wildbienentest.svg" alt="">
@@ -42,6 +36,11 @@
 					</router-link>
 				</div>
 			</div>
+			<img
+				class="stage-image"
+				src="../../src/assets/media/stage_blurred.jpg"
+				alt="background-image"
+			>
 		</div>
 
 		<!-- INTRO SECTION -->
@@ -247,14 +246,12 @@
 import { methodMixin } from '../methodMixin';
 import FactStripe from '../components/FactStripe.vue';
 import PlantCard from '../components/PlantCard.vue';
-import Parallax from 'vue-parallaxy';
 
 export default {
 	name: 'Home',
 	components: {
 		FactStripe,
-		PlantCard,
-		Parallax
+		PlantCard
 	},
 	mixins: [methodMixin],
 	props: {
@@ -270,7 +267,7 @@ export default {
 
 	data () {
 		return {
-
+			rellax: {}
 		};
 	},
 
@@ -282,6 +279,16 @@ export default {
 		projectInfoClasses: function () {
 			return this.allCookiesAllowed ? 'col col-lg-8 pr-lg-5' : 'col col-lg-8';
 		}
+	},
+
+	mounted () {
+		this.rellax = new this.$rellax('.stage-image', {
+			speed: 1.5,
+			center: false,
+			round: true,
+			vertical: true,
+			horizontal: false
+		});
 	}
 
 };
@@ -293,17 +300,20 @@ export default {
 @import "../assets/sass/_colors.scss";
 @import "../assets/sass/_animations.scss";
 
-.stage {
-	// background: url("../../src/assets/media/stage_blurred.jpg") no-repeat center center fixed;
-	// background-size: cover;
-	// -webkit-background-size: cover;
-  // -moz-background-size: cover;
-	// -o-background-size: cover;
+.stage-wrapper {
+	position: relative;
+	overflow: hidden;
 
 	.stage-content {
+		position: relative;
+		z-index: 9;
+	}
+
+	.stage-image {
 		position: absolute;
 		top: 0;
 		left: 0;
+		z-index: 0;
 	}
 
 	@media (min-width: 768px) {

@@ -5,9 +5,13 @@ import './assets/sass/wbtest-main.scss';
 import router from './router';
 import store from './store';
 import twitter from 'vue-twitter';
+import rellax from 'rellax';
+
+Object.defineProperty(Vue.prototype, '$rellax', {value: rellax});
 
 Vue.use(BootstrapVue);
 Vue.use(twitter);
+
 Vue.config.productionTip = false;
 
 new Vue({

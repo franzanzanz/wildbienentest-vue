@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div id="home-top" class="stage-wrapper container-fluid mb-5 pb-4 pb-sm-0 px-0">
-			<div class="stage-content">
+			<div class="stage-content container-fluid">
 				<div class="row justify-content-center">
 					<div class="col-12 text-sm-center pl-4 px-sm-0">
 						<img class="logo-stage mt-3 mb-4 mb-sm-5 " src="../../src/assets/media/logo-wildbienentest.svg" alt="">
@@ -62,7 +62,11 @@
 					</div>
 				</div>
 			</div>
-			<FactStripe />
+
+			<FactStripe
+				stripetype="type-a"
+			/>
+
 			<div id="home-intro-2" class="container">
 				<div class="row justify-content-center">
 					<div class="col col-lg-8 d-flex flex-column">
@@ -236,8 +240,10 @@
 			</div>
 		</div>
 
-		<div id="home-team" class="container-fluid my-5">
-			Team
+		<div id="home-team">
+			<FactStripe
+				stripetype="type-b"
+			/>
 		</div>
 	</div>
 </template>
@@ -246,6 +252,8 @@
 import { methodMixin } from '../methodMixin';
 import FactStripe from '../components/FactStripe.vue';
 import PlantCard from '../components/PlantCard.vue';
+import datasource from '../assets/sourcefile.json';
+
 
 export default {
 	name: 'Home',
@@ -267,6 +275,7 @@ export default {
 
 	data () {
 		return {
+			pageContent: datasource.frontpage,
 			rellax: {}
 		};
 	},
@@ -326,15 +335,18 @@ export default {
 }
 
 .twitter-timeline {
-	background: rgb(254,238,231);
-	background: linear-gradient(32deg, rgba(254,238,231,1) 0%, rgba(235,254,255,1) 100%);
+	background: $blue-ultralight;
+	// background: $gradient-warm-cold_50alpha;
 	border-radius: $radius-base;
 	border: 4px dotted $red-ultralight;
 }
 
 .pflanztipps-wrapper {
-	background: url("../../src/assets/media/floral_pattern_infinite_blurred.jpg") repeat center;
-	// background-size: cover;
+	// background: url("../../src/assets/media/floral_pattern_infinite_blurred.jpg") repeat center;
+	background: $warm-50alpha;
+	background: $gradient-warm-cold_50alpha-webkit;
+	background: $gradient-warm-cold_50alpha-moz;
+	background: $gradient-warm-cold_50alpha;
 
 	.container-pflanztipps {
 		max-width: 1200px;

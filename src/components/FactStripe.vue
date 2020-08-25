@@ -2,44 +2,46 @@
 	<div id="facts-stripe" class="mb-5">
 		<div class="container-fluid fact-stripe-wrapper">
 			<div class="stripe-content">
+				<div
+					v-if="stripetype=='type-b'"
+					class="row text-center mt-5 fact-stripe-headline"
+				>
+					<div class="col">
+						<h2 class="mb-0">
+							Hallo?
+						</h2>
+					</div>
+				</div>
 				<div class="row p-5 justify-content-center justify-content-sm-between">
-					<div class="col-12 col-md-6 ml-md-auto mr-md-2 col-xl-2 mx-xl-auto fact-card text-center py-4 px-3 mb-5 mb-xl-0">
-						<h1>
-							550
-						</h1>
-						<p class="mb-0">
-							Wildbienenarten gibt es in Deutschland
-						</p>
-					</div>
-					<div class="col-12 col-md-6 mx-md-auto col-xl-2 mx-xl-auto fact-card text-center py-4 px-3 mb-5 mb-xl-0">
-						<h1>
-							70%
-						</h1>
-						<p class="mb-0">
-							der Nutzpflanzen weltweit sind auf Insektenbestäubung angewiesen
-						</p>
-					</div>
-					<div class="col-12 col-md-6 mx-md-auto col-xl-2 mx-xl-auto fact-card text-center py-4 px-3 mb-5 mb-md-0">
-						<h1>
-							3.
-						</h1>
-						<p class="mb-0">
-							drittwichtigstes Nutztier Deutschlands ist die Biene
-						</p>
-					</div>
-					<div class="col-12 col-md-6 mr-md-auto ml-md-2 col-xl-2 mx-xl-auto fact-card text-center py-4 px-3 mb-5 mb-sm-0">
-						<h1>
-							2.000
-						</h1>
-						<p class="mb-0">
-							Blüten besucht eine Biene am Tag
-						</p>
-					</div>
+					<FactStripeCard
+						class="col-12 col-md-6 ml-md-auto mr-md-2 col-xl-2 mx-xl-auto fact-card text-center py-4 px-3 mb-5 mb-xl-0"
+						card-type="big"
+						bigtext="550"
+						smalltext="Wildbienenarten gibt es in Deutschland"
+					/>
+					<FactStripeCard
+						class="col-12 col-md-6 mx-md-auto col-xl-2 mx-xl-auto fact-card text-center py-4 px-3 mb-5 mb-xl-0"
+						card-type="big"
+						bigtext="70%"
+						smalltext="der Nutzpflanzen weltweit sind auf Insektenbestäubung angewiesen"
+					/>
+					<FactStripeCard
+						class="col-12 col-md-6 mx-md-auto col-xl-2 mx-xl-auto fact-card text-center py-4 px-3 mb-5 mb-md-0"
+						card-type="big"
+						bigtext="3."
+						smalltext="drittwichtigstes Nutztier Deutschlands ist die Biene"
+					/>
+					<FactStripeCard
+						class="col-12 col-md-6 mr-md-auto ml-md-2 col-xl-2 mx-xl-auto fact-card text-center py-4 px-3 mb-5 mb-sm-0"
+						card-type="big"
+						bigtext="2.000"
+						smalltext="Blüten besucht eine Biene am Tag"
+					/>
 				</div>
 			</div>
 			<img
 				class="stripe-image"
-				src="../../src/assets/media/eva-waardenburg-v-3NQ3pmWkY-unsplash.jpg"
+				:src="backgroundImage"
 				alt="stripe-background"
 			>
 		</div>
@@ -47,10 +49,21 @@
 </template>
 
 <script>
+import FactStripeCard from '../components/FactStripeCard.vue';
+
+
 export default {
 	name: 'FactsStripe',
 
+	components: {
+		FactStripeCard
+	},
+
 	props: {
+		stripetype: {
+			type: String,
+			default: 'type-a'
+		},
 		content: {
 			type: Object,
 			default() {
@@ -61,11 +74,32 @@ export default {
 
 	data () {
 		return {
-			stripetype: 'big',
 			headlines: [],
 			texts: [],
-			rellax: {}
+			rellax: {},
+			cardType: '',
+			imagesource: '',
+			images: [
+				'@/assets/media/eva-waardenburg-v-3NQ3pmWkY-unsplash.jpg',
+				'@/assets/media/mike-erskine-zXxz8AAcSmE-unsplash.jpg'
+			]
 		};
+	},
+
+	computed: {
+		backgroundImage: function () {
+			switch (this.stripetype) {
+			case 'type-a':
+				return require('@/assets/media/eva-waardenburg-v-3NQ3pmWkY-unsplash.jpg');
+			case 'type-b':
+				return require('@/assets/media/mike-erskine-zXxz8AAcSmE-unsplash.jpg');
+			default:
+				return require('@/assets/media/eva-waardenburg-v-3NQ3pmWkY-unsplash.jpg');
+			}
+		}
+	},
+
+	created () {
 	},
 
 	mounted () {
@@ -74,8 +108,11 @@ export default {
 			center: false,
 			round: true,
 			vertical: true,
-			horizontal: false
+			horizontal: false,
 		});
+	},
+
+	methods: {
 	}
 };
 </script>
@@ -87,31 +124,20 @@ export default {
 			position: relative;
 			overflow: hidden;
 
+			.fact-stripe-headline {
+				color: $red;
+			}
+
 			.stripe-content {
 				position: relative;
 				z-index: 1;
-				.fact-card {
-					border: 4px dotted $red-025alpha;
-					background-color: $red-01alpha;
-					border-radius: 1rem;
-					h1 {
-						font-size: 5rem;
-						font-weight: 700;
-						color: $red;
-						margin-bottom: -1rem;
-					}
-					p {
-						font-weight: 600;
-						line-height: 1.4rem;
-					}
-				}
 			}
 
 			.stripe-image {
 				position: absolute;
 				top: 0;
 				left: 0;
-				width: 100%;
+				scale: 1;
 				z-index: 0;
 			}
 		}

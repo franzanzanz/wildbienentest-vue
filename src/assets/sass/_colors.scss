@@ -28,7 +28,16 @@ $peach-3: #FF9493;
 $lime-1: #C0F185;
 $lime-2: #95E48E;
 
+$blue-ultralight: #EDFEFF;
+
+$warm-50alpha: rgba(255,196,169,0.5);
+$cold-50alpha: rgba(182,250,255,0.5);
+
 // GRADIENTS
+
+$gradient-warm-cold_50alpha-webkit: -webkit-linear-gradient(to top right, $warm-50alpha, $cold-50alpha);
+$gradient-warm-cold_50alpha-moz: -moz-linear-gradient(to top right, $warm-50alpha, $cold-50alpha);
+$gradient-warm-cold_50alpha: linear-gradient(to top right, $warm-50alpha, $cold-50alpha);
 
 $gradient-peach-webkit: -webkit-linear-gradient(bottom left, $peach-1, $peach-3);
 $gradient-peach-moz: -moz-linear-gradient(bottom left, $peach-1, $peach-3);
